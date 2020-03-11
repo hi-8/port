@@ -1,0 +1,1182 @@
+.page-template-page-reserve {
+    #sec_concept {
+        padding: 70px 0 80px;
+        background-image: url(../img/reserve/mainv_pc.jpg);
+        background-size: cover;
+        width: 100%;
+
+        @include notsp {
+            min-height: 724px;
+        }
+
+        @include sp {
+            background-image: url(../img/reserve/mainv_sp.jpg);
+            padding: 60px 0 40px;
+        }
+
+        .inr {
+            @include sp {
+                width: 90%;
+                margin: auto;
+            }
+        }
+
+        .concept- {
+            &title {
+                text-align: center;
+                font-size: 1.25rem;
+                line-height: 2em;
+                margin-bottom: 40px;
+                color: white;
+                font-weight: 500;
+                letter-spacing: .1em;
+
+                @include sp {
+                    font-size: 15px;
+                }
+            }
+
+            &img {
+                display: block;
+                margin: auto;
+                margin-bottom: 40px;
+                max-width: 100px;
+            }
+
+            &detail {
+                line-height: 1.4em;
+                font-size: .875rem;
+                color: white;
+                text-align: center;
+                line-height: 2.4em;
+
+                @include notsp {
+                    width: 60%;
+                    margin: auto;
+                    margin-bottom: 50px;
+                }
+
+                @include sp {
+                    font-size: 12px;
+                    line-height: 2.8em;
+                    margin-bottom: 50px;
+                }
+            }
+
+            &btn {
+                background-color: white;
+                padding: 20px 0;
+                display: flex;
+                margin: auto;
+                max-width: 216px;
+                position: relative;
+                align-items: center;
+                justify-content: center;
+
+                p {
+                    color: $col_gre;
+                    text-align: center;
+                }
+
+                img {
+                    position: absolute;
+                    top: 0;
+                    bottom: 0;
+                    right: 10px;
+                    margin-right: 10px;
+                    margin: auto;
+                    align-self: center;
+                }
+            }
+        }
+    }
+
+    #sec_lineup {
+        padding: 88px 0 110px;
+
+        @include sp {
+            padding: 45px 0;
+        }
+
+        .title {
+            font-size: 1.5rem;
+            text-align: center;
+            color: $col_gre;
+            font-weight: 500;
+            margin-bottom: 60px;
+
+            @include sp {
+                font-size: 1.25rem;
+            }
+
+            &:after {
+                content: "";
+                display: block;
+                height: 1px;
+                width: 50px;
+                background-color: $col_gre;
+                margin: auto;
+                margin-top: 20px;
+            }
+        }
+
+        .inr {
+            max-width: 1000px;
+            margin: auto;
+
+            @include tab {
+                width: 90%;
+            }
+
+            .lineup-list {
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+
+                &-cell {
+                    width: 31%;
+                    background-color: $col_gray-light;
+                    transition: all .4s;
+
+                    &:not(:last-child) {
+                        @include sp {
+                            margin-bottom: 20px;
+                        }
+                    }
+
+                    @include sp {
+                        width: 100%;
+                    }
+
+                    .cell-img {
+                        width: 100%;
+                    }
+
+                    .cell-top {
+                        position: relative;
+
+                        .dir {
+                            position: absolute;
+                            z-index: 2;
+                            bottom: -18px;
+                            left: 0;
+                            right: 0;
+                            margin: auto;
+                            max-width: 36px;
+                        }
+                    }
+
+                    .cell-bottom {
+                        padding: 45px 20px 50px;
+                        box-sizing: border-box;
+
+                        .name {
+                            font-size: 1.5rem;
+                            font-weight: 500;
+                            color: $col_gre;
+                            margin-bottom: 25px;
+                            text-align: center;
+
+                            span {
+                                font-size: .875rem;
+                            }
+                        }
+
+                        .detail {
+                            font-size: .875rem;
+                            line-height: 1.5em;
+
+                        }
+                    }
+
+                    &:hover {
+                        background-color: $col_gre;
+
+                        .cell-bottom {
+
+                            .name,
+                            .detail {
+                                color: white;
+                            }
+
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    #sec_spot {
+        padding: 85px 0;
+        background-color: $col_gray-light;
+
+        @include sp {
+            padding: 60px 0 40px;
+        }
+
+        .title {
+            font-size: 1.875rem;
+            text-align: center;
+            color: $col_gre;
+            margin-bottom: 65px;
+            font-weight: normal;
+
+            @include sp {
+                font-size: 1.375rem;
+                margin-bottom: 30px;
+            }
+
+            &:not(span) {
+                @include en;
+                letter-spacing: .1em;
+            }
+
+            span {
+                font-size: 1rem;
+                color: $col_gre;
+                text-align: center;
+                display: block;
+                margin-top: 20px;
+
+                @include sp {
+                    font-size: .875rem;
+                }
+            }
+        }
+
+        .view-pc {
+            width: 90%;
+            margin: auto;
+
+            @include sp {
+                display: none;
+            }
+        }
+
+        .view-sp {
+            max-width: 100%;
+            overflow: hidden;
+
+            @include notsp {
+                display: none;
+            }
+
+
+            &-cell {
+                margin: 0 10px;
+
+                &-link {
+                    position: relative;
+                    overflow: hidden;
+                    display: block;
+
+                    .name {
+                        margin-top: 10px;
+                        margin-bottom: 10px;
+                        text-align: center;
+
+                    }
+
+                    .detail {
+                        font-size: 14px;
+                        text-align: left;
+                        margin-bottom: 20px;
+                        line-height: 1.8em;
+                    }
+                }
+            }
+
+            &.slick-dotted.slick-slider {
+                margin-bottom: 0;
+            }
+
+            .slick-dots {
+                position: relative;
+                bottom: 0;
+            }
+
+            .slick-dots li {
+                margin: 0;
+
+                button:before {
+                    content: "•";
+                    color: #888888;
+                    opacity: 1;
+                }
+
+                &.slick-active {
+                    button:before {
+                        color: #DDDDDD;
+                    }
+                }
+            }
+        }
+
+        .modal-thumb-list {
+            display: flex;
+            justify-content: space-between;
+            max-width: 1000px;
+            margin: auto;
+            flex-wrap: wrap;
+
+            .modal-thumb-cell {
+                cursor: pointer;
+                width: 32.5%;
+
+                background-color: white;
+                margin-bottom: 12px;
+
+            }
+
+            .modal-thumb-txt {
+                display: flex;
+                justify-content: center;
+                padding: 10px 0;
+
+                p {
+                    font-size: .875rem;
+                }
+
+                img {
+                    margin-left: 5px;
+                }
+            }
+        }
+    }
+
+    .modal-v {
+        max-width: 780px;
+        padding: 55px;
+
+        .close {
+            position: absolute;
+            top: -40px;
+            right: -40px;
+            cursor: pointer;
+
+        }
+
+        &_img {
+            width: 100%;
+            position: relative;
+        }
+
+        &_txt {
+            position: absolute;
+            box-sizing: border-box;
+            width: 100%;
+            bottom: 0;
+            padding: 17px 22px;
+            background-color: rgba(38, 31, 31, 0.4);
+            display: flex;
+
+
+            img {
+                margin-right: 20px;
+            }
+
+            .inr {
+
+                .title {
+                    font-size: 1.25rem;
+                    color: white;
+                    font-weight: 500;
+                    margin-bottom: 15px;
+
+                }
+
+                .detail {
+                    font-size: .875rem;
+                    line-height: 2em;
+                    color: white;
+
+                }
+            }
+        }
+
+        &_cmn {
+            @include en;
+            font-size: .875rem;
+            color: white;
+            letter-spacing: .1em;
+            padding: 12px 25px;
+            position: absolute;
+            top: 0;
+            right: 0;
+            z-index: 899;
+            background-color: $col_gre;
+
+        }
+    }
+
+    #sec_howto {
+        padding: 85px 0;
+
+        @include sp {
+            padding: 60px 0 40px;
+        }
+
+        >.title {
+            font-size: 1.875rem;
+            text-align: center;
+            color: $col_gre;
+            margin-bottom: 65px;
+            font-weight: normal;
+
+            @include sp {
+                font-size: 1.375rem;
+                margin-bottom: 30px;
+                line-height: 1.5em;
+
+            }
+
+            &:not(span) {
+                @include en;
+                letter-spacing: .1em;
+            }
+
+            span {
+                font-size: 1rem;
+                color: $col_gre;
+                text-align: center;
+                display: block;
+                margin-top: 20px;
+
+                @include sp {
+                    font-size: .875rem;
+                    line-height: 1;
+                    margin-top: 10px;
+
+                }
+            }
+        }
+
+        .howto-list {
+            display: flex;
+            justify-content: space-between;
+            max-width: 1000px;
+            margin: auto;
+            flex-wrap: wrap;
+
+            @include sp {
+                width: 95%;
+            }
+
+            .howto-cell {
+                width: 31%;
+                background-color: white;
+                margin-bottom: 12px;
+
+                @include sp {
+                    width: 49%;
+                }
+            }
+
+            .howto-txt {
+                display: flex;
+                justify-content: center;
+                padding: 10px 0;
+
+                p {
+                    font-size: .875rem;
+
+                    @include sp {
+                        font-size: .75rem;
+                        line-height: 1.5em;
+                    }
+                }
+
+                img {
+                    margin-left: 5px;
+                }
+            }
+        }
+
+        .howto-attention {
+            margin: auto;
+            margin-top: 60px;
+            box-sizing: border-box;
+            padding: 25px;
+            border: 5px solid $col_gray-light;
+            max-width: 800px;
+
+            @include sp {
+                width: 95%;
+                margin-top: 20px;
+            }
+
+            .title {
+                text-align: center;
+                font-weight: 500;
+                color: black;
+                margin-bottom: 25px;
+
+            }
+
+            .detail {
+                color: $col_red;
+                line-height: 2em;
+                text-align: center;
+
+                @include sp {
+                    font-size: .875rem;
+                    text-align: left;
+                }
+            }
+        }
+    }
+
+    #sec_estimate {
+        padding-bottom: 100px;
+
+        @include sp {
+            padding-bottom: 40px;
+        }
+
+        .form-desc {
+            background-color: $col_gray-light;
+            padding: 65px;
+
+            @include sp {
+                padding: 46px 26px;
+            }
+
+            .inr {
+                max-width: 800px;
+                margin: auto;
+
+                .title {
+                    font-size: 1.5rem;
+                    text-align: center;
+                    color: $col_gre;
+                    font-weight: 500;
+                    margin-bottom: 30px;
+
+                    @include sp {
+                        font-size: 1.25rem;
+                        margin-bottom: 30px;
+                    }
+
+                    &:after {
+                        content: "";
+                        display: block;
+                        height: 1px;
+                        width: 50px;
+                        background-color: $col_gre;
+                        margin: auto;
+                        margin-top: 30px;
+                    }
+                }
+
+                .detail {
+                    font-size: .875rem;
+                    line-height: 1.8em;
+                    color: $col_gray-dark;
+
+                    @include sp {
+                        line-height: 2em;
+                    }
+                }
+            }
+        }
+
+        .form-tell {
+            padding: 55px 0;
+            margin: auto;
+
+            @include sp {
+                width: 90%;
+                padding-bottom: 20px;
+            }
+
+            .ico {
+                display: block;
+                margin: auto;
+                margin-bottom: 20px;
+            }
+
+            .desc {
+                font-size: 1.125rem;
+                margin-bottom: 40px;
+                text-align: center;
+
+                @include sp {
+                    font-size: 16px;
+                    line-height: 1.6em;
+                    letter-spacing: 0;
+                }
+            }
+
+            .form-office {
+                .inr {
+                    display: flex;
+                    display: flex;
+                    align-items: flex-end;
+                    justify-content: center;
+                    max-width: 600px;
+                    margin: auto;
+
+                    .kanazawa {
+                        padding-right: 95px;
+                        border-right: 1px dotted black;
+
+                        @include sp {
+                            padding-right: 14px;
+                            box-sizing: border-box;
+                            width: 50%;
+                        }
+                    }
+
+                    .nanao {
+                        padding-left: 95px;
+
+                        @include sp {
+                            padding-left: 14px;
+                            box-sizing: border-box;
+                            width: 50%;
+                        }
+                    }
+
+                    .tell-flame {}
+
+                    .name {
+                        margin-bottom: 40px;
+                        height: 45px;
+                        display: flex;
+                        align-items: center;
+                        flex-direction: column;
+                        justify-content: center;
+
+                        @include sp {
+                            padding: 14px 0;
+                            background-color: $col_gre;
+                            height: 55px;
+                            box-sizing: border-box;
+                            margin-bottom: 15px;
+                        }
+
+                        p {
+                            font-size: 1.125rem;
+                            color: $col_gre;
+                            text-align: center;
+
+                            @include sp {
+                                color: white;
+                                font-size: 13px;
+                            }
+
+                            span {
+                                font-size: .875rem;
+                                display: block;
+                                margin-top: 10px;
+
+                                @include sp {
+                                    font-size: 10px;
+                                }
+                            }
+                        }
+
+                    }
+
+                    .tell {
+                        .num {
+                            display: flex;
+                            align-items: baseline;
+                            margin-bottom: 10px;
+
+                            @include sp {
+                                justify-content: center;
+                            }
+
+                            dt {
+                                @include en;
+                                font-weight: 600;
+                                font-size: 15px;
+                                width: 30px;
+
+                                @include sp {
+                                    font-size: 12px;
+                                    width: 25px;
+                                }
+                            }
+
+                            dd {
+                                @include en;
+                                font-weight: 600;
+                                font-size: 20px;
+                                letter-spacing: .1em;
+
+                                @include sp {
+                                    font-size: 14px;
+                                }
+
+                                a {
+                                    @include notsp {
+                                        pointer-events: none;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                }
+
+                .hours {
+                    background-color: $col_gre;
+                    max-width: 600px;
+                    box-sizing: border-box;
+                    padding: 20px;
+                    margin: auto;
+                    margin-top: 20px;
+
+                    @include sp {
+                        padding: 20px 5px;
+                    }
+
+                    p {
+                        color: white;
+                        text-align: center;
+
+                        @include sp {
+                            font-size: 14px;
+                            line-height: 1.6em;
+                            letter-spacing: 0;
+                        }
+                    }
+                }
+            }
+        }
+
+        .form-estimate {
+            padding-top: 55px;
+            border-top: 1px dotted $col_gray-dark;
+            max-width: 1000px;
+            margin: auto;
+
+            @include sp {
+                padding-top: 30px;
+            }
+
+            .inr {
+                max-width: 800px;
+                margin: auto;
+
+                .attention {
+                    margin-bottom: 50px;
+
+                    @include sp {
+                        width: 90%;
+                        margin: 0 auto 50px;
+                    }
+
+                    .title {
+                        text-align: center;
+                        margin-bottom: 20px;
+                    }
+
+                    .detail {
+                        line-height: 2em;
+                        letter-spacing: 0;
+
+                        @include sp {
+                            font-size: 14px;
+                            letter-spacing: .05em;
+                        }
+
+                        span {
+                            font-size: .875rem;
+
+                            @include sp {
+                                font-size: 12px;
+                                letter-spacing: 0;
+                            }
+                        }
+                    }
+                }
+
+            }
+
+        }
+    }
+}
+
+.page-template-page-introduce {
+    .sec-bus {
+        padding: 80px 0 110px;
+
+        @include sp {
+            padding: 60px 0;
+            width: 90%;
+            margin: auto;
+        }
+
+        .inr {
+            max-width: 1000px;
+            margin: auto;
+
+            .title {
+                font-size: 1.5rem;
+                text-align: center;
+                color: $col_gre;
+                font-weight: 500;
+                margin-bottom: 36px;
+
+                @include sp {
+                    font-size: 1.25rem;
+                }
+
+                &:after {
+                    content: "";
+                    display: block;
+                    height: 1px;
+                    width: 50px;
+                    background-color: $col_gre;
+                    margin: auto;
+                    margin-top: 20px;
+                }
+
+                &-sub {
+                    text-align: center;
+                    margin-bottom: 80px;
+                    line-height: 2em;
+
+                    @include sp {
+                        font-size: 14px;
+                        text-align: left;
+                        margin-bottom: 60px;
+
+                        br {
+                            display: none;
+                        }
+                    }
+                }
+            }
+
+            .bus-img {
+                display: block;
+                margin: auto;
+                margin-bottom: 140px;
+
+                @include sp {
+                    margin-bottom: 60px;
+                }
+            }
+
+            .bus-detail-cell {
+                border: 1px solid #E5E5E5;
+                padding: 45px 60px;
+                box-sizing: border-box;
+                margin-bottom: 70px;
+
+                @include sp {
+                    padding: 0;
+                    border: none;
+                    padding-bottom: 60px;
+                    border-bottom: 1px dotted black;
+                    margin-bottom: 60px;
+                }
+
+                &:last-child {
+                    margin-bottom: 0;
+
+                    @include sp {
+                        border: none;
+                        padding-bottom: 0;
+                    }
+                }
+
+                .bus-detail- {
+                    &name {
+                        font-size: 1.25rem;
+                        text-align: center;
+                        color: $col_gre;
+                        margin-bottom: 40px;
+                        font-weight: 400;
+
+                        @include sp {
+                            font-size: .875rem;
+                            font-weight: 500;
+                            text-align: left;
+                            margin-bottom: 20px;
+                        }
+                    }
+
+                    &img {
+                        width: 100%;
+                        margin-bottom: 55px;
+
+                        img {
+                            width: 100%;
+                        }
+
+                        &.flex {
+                            display: flex;
+                            justify-content: space-between;
+
+                            img {
+                                width: 48.5%;
+
+                                &.w100 {
+                                    width: 100%;
+                                }
+                            }
+                        }
+                    }
+
+                    &graph {
+                        width: 100%;
+
+                        .attention {
+                            font-size: .875rem;
+                            line-height: 1.6em;
+                            margin-top: 10px;
+                        }
+
+                        @include sp {
+                            overflow-x: scroll;
+
+                            img {
+                                max-width: 550px;
+                            }
+                        }
+
+                        &-attention {
+                            @include notsp {
+                                display: none;
+                            }
+
+                            background-color: $col_gre;
+                            font-size: 14px;
+                            color: white;
+                            padding: 10px;
+                            box-sizing: border-box;
+                            width: 100%;
+                        }
+
+                        .combi-table {
+                            width: 100%;
+                            margin: auto;
+                            margin-top: 40px;
+                            border-collapse: separate;
+                            border-left: 1px solid $col_gre;
+                            border-bottom: 1px solid $col_gre;
+
+                            @include sp {
+                                width: 550px;
+                                margin-top: 0;
+                            }
+
+                            p {
+                                @include sp {
+                                    font-size: 12px;
+                                }
+                            }
+
+                            tbody {
+                                border-bottom: 1px solid $col_gre-light;
+                            }
+
+                            th,
+                            td {
+                                text-align: center;
+                                font-size: 14px;
+                                line-height: 1.6em;
+
+                            }
+
+                            tr {
+                                th {
+                                    background-color: $col_gre-light;
+                                    border-top: 1px solid $col_gre;
+                                    border-right: 1px solid $col_gre;
+                                    box-sizing: border-box;
+                                    padding: 20px 10px;
+                                    vertical-align: middle;
+                                    font-weight: 400;
+
+                                    &.middle {
+                                        width: 12%;
+                                    }
+
+                                    @include sp {
+                                        padding: 15px;
+                                    }
+                                }
+
+                                td {
+                                    background-color: white;
+                                    border-top: 1px solid $col_gre;
+                                    box-sizing: border-box;
+                                    padding: 20px;
+                                    vertical-align: middle;
+                                    border-right: 1px solid $col_gre;
+
+                                    @include sp {
+                                        padding: 15px;
+                                    }
+                                }
+                            }
+                        }
+
+                        .row-table {
+                            border-left: 1px solid $col_gre;
+                            border-right: 1px solid $col_gre;
+                            width: 100%;
+                            margin: auto;
+                            margin-top: 40px;
+                            border-bottom: 1px solid $col_gre;
+
+                            @include sp {
+                                width: 550px;
+                            }
+
+                            p {
+                                @include sp {
+                                    font-size: 12px;
+                                }
+                            }
+
+                            th,
+                            td {
+                                text-align: center;
+                                font-size: 14px;
+                                line-height: 1.6em;
+
+                            }
+
+                            tr {
+                                th {
+                                    background-color: $col_gre-light;
+                                    border-top: 1px solid $col_gre;
+                                    border-right: 1px solid $col_gre;
+                                    box-sizing: border-box;
+                                    padding: 20px 10px;
+                                    vertical-align: middle;
+                                    font-weight: 400;
+
+                                    @include sp {
+                                        padding: 15px;
+                                    }
+
+                                    width: 20%;
+                                }
+
+                                td {
+                                    background-color: white;
+                                    border-top: 1px solid $col_gre;
+                                    box-sizing: border-box;
+                                    padding: 20px;
+                                    vertical-align: middle;
+                                    border-right: 1px solid $col_gre;
+                                    text-align: left;
+
+                                    @include sp {
+                                        padding: 15px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .btn-flex {
+                    display: flex;
+                    justify-content: space-between;
+
+                    @include sp {
+                        display: block;
+                    }
+
+                    .btn-radi {
+                        width: 49%;
+                        margin: 0;
+                        margin-top: 50px;
+
+                        @include sp {
+                            width: 100%;
+
+                            &:last-child {
+                                margin-top: 20px;
+                            }
+                        }
+                    }
+                }
+
+
+            }
+
+            .btn-radi {
+                border-radius: 40px;
+                background-color: $col_gre;
+                padding: 20px 0;
+                max-width: 458px;
+                position: relative;
+                display: block;
+                margin: auto;
+                margin-top: 50px;
+
+                @include sp {
+                    padding: 15px 0;
+                }
+
+                .main-txt {
+                    font-size: 1.25rem;
+                    font-weight: 500;
+                    text-align: center;
+                    color: white;
+                    width: 70%;
+                    margin: auto;
+
+                    @include sp {
+                        font-size: 14px;
+                    }
+                }
+
+                .sub-txt {
+                    margin: auto;
+                    margin-top: 10px;
+                    font-size: .875rem;
+                    text-align: center;
+                    color: white;
+                    width: 70%;
+
+                    @include sp {
+                        font-size: 12px;
+                    }
+                }
+
+                .btn-ico {
+                    position: absolute;
+                    top: 0;
+                    bottom: 0;
+                    right: 30px;
+                    margin: auto;
+                }
+
+                &.mid {
+                    max-width: 334px;
+                    margin-bottom: 50px;
+                }
+
+            }
+        }
+
+        &#sec_bus-s {
+            .bus-detail-cell {
+                &:nth-last-child(2) {
+                    margin-bottom: 20px;
+                }
+            }
+
+            .inr {
+                .bus-img {
+                    @include sp {
+                        width: 85%;
+                    }
+                }
+            }
+        }
+    }
+
+}

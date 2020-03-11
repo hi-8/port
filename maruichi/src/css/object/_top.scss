@@ -1,0 +1,313 @@
+body {
+    background: white;
+}
+
+.home {
+
+    #mainv {
+        position: relative;
+        background: #ccc;
+
+        @include tab {
+            height: auto;
+        }
+
+        #bodymovin-wrapper {
+            position: absolute;
+            z-index: 10;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+            width: 34.6875%;
+            max-width: 460px;
+
+            @include sp {
+                max-width: 90%;
+                width: 79.4666%;
+            }
+        }
+
+        .mainv-- {
+            &list {
+                height: 100%;
+            }
+
+            &img {
+                height: 598px;
+                width: 100%;
+                display: block;
+                background-size: cover;
+
+                @include tab {
+                    height: 358.8px;
+                }
+
+
+                &.img01 {
+                    background-image: url(../img/top/mainv--img01.jpg);
+
+                    @include sp {
+                        background-image: url(../img/top/mainv--img01_sp.jpg);
+                    }
+                }
+
+                &.img02 {
+                    background-image: url(../img/top/mainv--img02.jpg);
+
+                    @include sp {
+                        background-image: url(../img/top/mainv--img02_sp.jpg);
+                    }
+                }
+
+                &.img03 {
+                    background-image: url(../img/top/mainv--img03.jpg);
+
+                    @include sp {
+                        background-image: url(../img/top/mainv--img03_sp.jpg);
+                    }
+                }
+
+                &.img04 {
+                    background-image: url(../img/top/mainv--img04.jpg);
+
+                    @include sp {
+                        background-image: url(../img/top/mainv--img04_sp.jpg);
+                    }
+                }
+
+                &.img05 {
+                    background-image: url(../img/top/mainv--img05.jpg);
+
+                    @include sp {
+                        background-image: url(../img/top/mainv--img05_sp.jpg);
+                    }
+                }
+            }
+        }
+    }
+
+    #sec_link-mainv {
+        .top-links {
+            max-width: 900px;
+            width: 68.5%;
+            display: flex;
+            margin: 50px auto;
+            align-items: flex-end;
+
+            @include tab {
+                width: 100%;
+                margin: 20px auto;
+            }
+
+            &-cell {
+                display: block;
+                width: 20%;
+
+                @include sp {
+                    height: 60px;
+                }
+
+                &:not(:last-child) {
+                    border-right: 1.5px dotted black;
+                }
+
+                a {
+                    display: block;
+                    width: 100%;
+                    box-sizing: border-box;
+
+                    img {
+                        margin: 0 auto 15px;
+                        display: block;
+
+                        @include sp {
+                            max-width: 30px;
+                            margin: 0 auto 5px;
+                        }
+                    }
+
+                    p {
+                        text-align: center;
+
+                        @include sp {
+                            display: block;
+                            font-size: 12px;
+                            transform: scale(0.7);
+                            letter-spacing: 0;
+                            line-height: 1.6em;
+
+                        }
+                    }
+                }
+
+                &:nth-child(1),
+                &:nth-child(3),
+                &:nth-child(4) {
+                    a {
+                        img {
+                            @include sp {
+                                width: 26px;
+                            }
+
+                        }
+                    }
+                }
+
+                &:nth-child(3) {
+                    a {
+                        img {
+                            margin-bottom: 5px;
+                        }
+
+                        p {
+                            @include sp {
+                                margin-top: -10px;
+                            }
+                        }
+                    }
+                }
+
+                &:nth-child(2) {
+                    a {
+                        img {
+                            @include sp {
+                                width: 30px;
+                            }
+
+                        }
+                    }
+                }
+
+                &:nth-child(5) {
+                    a {
+                        img {
+                            @include sp {
+                                width: 24px;
+                            }
+
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    #sec_large-link {
+        padding: 90px 0;
+
+        @include sp {
+            padding: 40px 0;
+        }
+
+        .inr {
+            width: 90%;
+            max-width: 1000px;
+            margin: auto;
+
+            @include sp {
+                width: 100%;
+            }
+
+            .large-link-cell {
+                position: relative;
+                display: flex;
+
+                &:nth-child(even) {
+                    @include notsp {
+                        flex-direction: row-reverse;
+                    }
+                }
+
+                &:nth-child(odd) {
+                    margin-bottom: 20px;
+
+                    @include sp {
+                        margin-bottom: 0;
+                    }
+                }
+
+                .dir {
+                    position: absolute;
+                    z-index: 2;
+                    top: 0;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                    margin: auto;
+
+                    @include sp {
+                        max-width: 20px;
+                    }
+                }
+
+                .left,
+                .right {
+                    width: 50%;
+                }
+
+                .right {
+                    background-color: $col_gray-light;
+                    box-sizing: border-box;
+                    position: relative;
+                    transition: all .4s;
+                    cursor: pointer;
+
+
+                    p {
+                        color: $col_gre;
+                        text-align: center;
+                    }
+
+                    .title {
+                        font-size: 36px;
+                        margin-bottom: 30px;
+
+                        @include sp {
+                            font-size: 1rem;
+                            margin-bottom: 10px;
+                            line-height: 1.6em;
+                        }
+                    }
+
+                    .detail {
+                        line-height: 2em;
+
+                        @include sp {
+                            font-size: .75rem;
+                            text-align: left;
+                            line-height: 1.5em;
+
+                            br {
+                                display: none;
+                            }
+                        }
+
+                    }
+
+                    .txt-inr {
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translateY(-50%) translateX(-50%);
+                        min-width: 80%;
+
+                        @include sp {
+                            min-width: 75%;
+                        }
+                    }
+
+                    &:hover {
+                        background-color: $col_gre;
+                        opacity: 1;
+
+                        p {
+                            color: white;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

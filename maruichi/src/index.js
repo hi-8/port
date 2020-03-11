@@ -1,0 +1,9 @@
+import "./css/main.scss";
+import "./js/common";
+import "./js/faq";
+import "./js/interior";
+import "./js/recruit";
+import "./js/reserve";
+import "./js/route";
+import "./js/top";
+import "./js/userguide";

@@ -1,0 +1,153 @@
+$la:1600px;
+$tab_la:1260px;
+$nottab:813px;
+$tab:812px;
+$tab_port:1024px;
+$nottab_port:1023px;
+$sp:480px;
+$notsp: 481px;
+$col_red:#D84747;
+$col_org:#E49C31;
+$col_org-light:#EBAF19;
+$col_org-vlight:#F4DEBE;
+$col_yel:#EFD460;
+$col_yel-soft:#F7EDC6;
+$col_gre:#019454;
+$col_gre-light:#59AD8D;
+$col_gre-vlight:#E2EFEA;
+$col_gray:#B2B2B2;
+$col_gray-light:#F7F7F7;
+
+@import url('https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,700|Noto+Sans+JP:100,300,400,500,700&display=swap');
+
+@mixin la {
+    @media (min-width: ($la)) {
+        @content;
+    }
+}
+
+@mixin tab {
+    @media (max-width: ($tab)) {
+        @content;
+    }
+}
+
+@mixin tab_la {
+    @media (max-width: ($tab_la)) {
+        @content;
+    }
+}
+
+@mixin nottab_la {
+    @media (min-width: ($tab_la)) {
+        @content;
+    }
+}
+
+@mixin tab_port {
+    @media screen and (max-width: ($tab_port)) {
+        @content;
+
+    }
+}
+
+@mixin nottab_port {
+    @media screen and (max-width:($nottab_port)) {
+        @content;
+    }
+}
+
+@mixin dev-tab {
+    @media (max-device-width: ($tab)) {
+        @content;
+    }
+}
+
+@mixin notdev-tab {
+    @media (min-device-width: ($tab)) {
+        @content;
+    }
+}
+
+@mixin nottab {
+    @media (min-width: ($nottab)) {
+        @content;
+    }
+}
+
+@mixin sp {
+    @media (max-width: ($sp)) {
+        @content;
+    }
+}
+
+@mixin notsp {
+    @media (min-width: ($notsp)) {
+        @content;
+    }
+}
+
+@mixin ie {
+    @media all and (-ms-high-contrast: none) {
+        @content;
+    }
+}
+
+@mixin edge {
+    @supports (-ms-ime-align:auto) {
+        @content;
+    }
+}
+
+@mixin en {
+    font-family: 'Lato', sans-serif;
+}
+
+@mixin jp {
+    font-family: toppan-bunkyu-gothic-pr6n, serif;
+}
+
+@mixin normal {
+    font-family: 'Noto Sans CJK JP', system-ui, sans-serif;
+}
+
+div,
+p,
+a,
+section,
+img {
+    @include ie {
+        flex-shrink: 0;
+    }
+}
+
+p,
+a,
+li,
+dt,
+dd {
+    font-feature-settings: "palt"1;
+}
+
+.pc {
+    @include tab {
+        display: none;
+    }
+}
+
+.notdev-tab {
+    @include notdev-tab {
+        display: none;
+    }
+}
+
+.sp {
+    @include nottab {
+        display: none;
+    }
+}
+
+body {
+    @include normal;
+    color: black;
+}
