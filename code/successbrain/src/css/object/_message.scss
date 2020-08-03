@@ -1,0 +1,214 @@
+.page-template-page-message {
+    .c--mainv {
+        &#message_mainv {
+            @include notsp {
+                background-image: url(../img/message/mainv_bg_pc.jpg);
+            }
+
+            @include sp {
+                background-image: url(../img/message/mainv_bg_sp.jpg);
+            }
+        }
+
+        .mainv__text {
+            p {
+                text-align: center;
+                color: white;
+                font-weight: normal;
+            }
+
+            .mainv__text--en {
+                font-size: 2rem;
+                margin-bottom: 40px;
+                @include en;
+                font-style: italic;
+
+                @include sp {
+                    font-size: 1.6rem;
+                    margin-bottom: 30px;
+                }
+            }
+
+            .mainv__text--main {
+                font-size: 4.4rem;
+
+                @include sp {
+                    font-size: 3rem;
+                }
+            }
+        }
+    }
+
+    #sec_message {
+        .message__cell {
+            padding: 90px 0 100px;
+            max-width: 900px;
+            width: 90%;
+            margin: auto;
+
+            @include sp {
+                padding: 60px 0 100px;
+            }
+
+            &:not(:last-child) {
+                border-bottom: 1px solid $col_vdblue;
+            }
+
+            .c--headingIcon {
+                margin-bottom: 90px;
+
+                @include sp {
+                    margin-bottom: 40px;
+                }
+            }
+
+            .message__philosophy {
+                .message__philosophyCell {
+                    .message__philosophy--title {
+                        font-size: 2.8rem;
+                        text-align: center;
+                        color: $col_dblue;
+                        margin-bottom: 30px;
+
+                        @include sp {
+                            font-size: 1.8rem;
+                            margin-bottom: 20px;
+                        }
+                    }
+
+                    .message__philosophy--detail {
+                        font-size: 2rem;
+                        line-height: 2em;
+                        text-align: center;
+
+                        @include sp {
+                            font-size: 1.4rem;
+                        }
+                    }
+
+                    &:not(:last-child) {
+                        margin-bottom: 60px;
+                    }
+                }
+
+            }
+
+            &.message__cell--profile {
+                &:last-child {
+                    padding-bottom: 140px;
+                }
+
+                .message__cell--profileInr {
+                    max-width: 680px;
+                    margin: auto;
+
+                    .message__profileTitle {
+                        font-size: 2.8rem;
+                        text-align: center;
+                        line-height: 2em;
+                        color: $col_dblue;
+                        margin-bottom: 50px;
+
+                        @include sp {
+                            font-size: 1.6rem;
+                        }
+                    }
+
+                    .message__profileText {
+                        p {
+                            font-size: 1.6rem;
+                            line-height: 2em;
+
+                            &:not(:last-child) {
+                                margin-bottom: 50px;
+
+                                @include sp {
+                                    margin-bottom: 30px;
+                                }
+                            }
+                        }
+                    }
+
+                    .message__profileImage {
+                        display: flex;
+                        justify-content: center;
+                        margin-top: 75px;
+                        margin-bottom: 120px;
+
+                        @include nottab {
+                            align-items: center;
+                        }
+
+                        @include tab {
+                            margin-top: 40px;
+                            margin-bottom: 80px;
+                        }
+
+                        .message__profileImage--icon {
+                            max-width: 176px;
+
+                            @include sp {
+                                max-width: 126px;
+                            }
+                        }
+
+                        .message__profileImage--name {
+                            margin-left: 16px;
+
+                            p {
+                                font-size: 1.6rem;
+                                margin-bottom: 16px;
+                            }
+
+                            img {
+                                height: 35px;
+
+                                @include sp {
+                                    height: 28px;
+                                }
+                            }
+                        }
+                    }
+
+                    .message__profileProfile {
+                        width: 100%;
+
+                        .message__profileProfile--title {
+                            font-size: 1.8rem;
+                            padding-bottom: 10px;
+                            border-bottom: .5px solid $col_dblue;
+                            margin-bottom: 30px;
+                            display: flex;
+                            align-items: center;
+                            color: $col_dblue;
+
+                            @include sp {
+                                font-size: 1.6rem;
+                            }
+
+                            &::after {
+                                content: "";
+                                width: 38px;
+                                height: 15px;
+                                display: block;
+                                background-image: url(../img/philosophy/stage_icon.svg);
+                                background-repeat: no-repeat;
+                                background-size: auto 100%;
+                                margin-left: 10px;
+                            }
+                        }
+
+                        .message__profileProfile--detial {
+                            font-size: 1.4rem;
+                            line-height: 2em;
+                            padding-bottom: 30px;
+                            border-bottom: .5px solid $col_dblue;
+
+                        }
+                    }
+                }
+
+            }
+        }
+    }
+}

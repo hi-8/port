@@ -1,0 +1,712 @@
+.page-template-archive,
+.category,
+.date,
+.single {
+
+    .p-sec__post {
+        padding: 80px 0 140px;
+
+        .c--headingIcon {
+            margin-bottom: 60px;
+
+            @include sp {
+                margin-bottom: 25px;
+            }
+        }
+
+        .p-post__title {
+            font-size: 2rem;
+            text-align: center;
+            color: $col_dblue;
+            margin-bottom: 110px;
+
+            @include sp {
+                margin-bottom: 60px;
+            }
+        }
+
+        .p-post__wrap {
+            max-width: 1000px;
+            width: 90%;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+
+            @include tab {
+                display: block;
+            }
+
+            .p-post__main {
+                max-width: 720px;
+                width: 100%;
+
+                @include tab {
+                    margin-bottom: 100px;
+                }
+
+                .p-post__box {
+                    border: 1px solid $col_vdblue;
+                    position: relative;
+                    padding: 60px;
+                    padding-top: 90px;
+                    box-sizing: border-box;
+
+                    @include tab {
+                        padding: 40px 10px;
+                        padding-top: 60px;
+                    }
+
+                    .p-post__label {
+                        position: absolute;
+                        box-sizing: border-box;
+                        background-repeat: no-repeat;
+
+                        @include nottab {
+                            top: -35px;
+                            left: -21px;
+                            width: 570px;
+                            height: 80px;
+                            padding-bottom: 10px;
+                            background-image: url(../img/post/label_bg_pc.svg);
+                        }
+
+                        @include tab {
+                            width: 320px;
+                            height: 60px;
+                            background-image: url(../img/post/label_bg_sp.svg);
+                            top: -28px;
+                            left: -9px;
+                            padding-bottom: 4px;
+                        }
+
+                        .p-post__labelText {
+                            height: 100%;
+                            width: 100%;
+                            box-sizing: border-box;
+                            padding-left: 81px;
+                            display: flex;
+                            align-items: center;
+
+                            @include tab {
+                                padding-left: 30px;
+                            }
+
+                            p {
+                                color: white;
+                                font-size: 3rem;
+                                @include en;
+                                font-style: italic;
+
+                                @include tab {
+                                    font-size: 2.2rem;
+                                }
+                            }
+                        }
+                    }
+
+                    .p-post__linkWrap {
+                        width: 100%;
+
+                        .p-post__link {
+                            border-bottom: 1px solid rgba($col_vdblue, .3);
+                            position: relative;
+                            padding: 20px 0;
+                            display: block;
+
+                            &:first-child {
+                                border-top: 1px solid rgba($col_vdblue, .3);
+                            }
+
+                            .p-post__linkDate {
+                                font-size: 1.2rem;
+                                color: $col_dblue;
+                                margin-bottom: 10px;
+                            }
+
+                            .p-post__linkCat {
+                                background-color: $col_lblue;
+                                color: white;
+                                font-size: 1rem;
+                                text-align: center;
+                                min-width: 120px;
+                                padding: 5px 10px;
+                                box-sizing: border-box;
+                                margin-bottom: 5px;
+                                display: table;
+                            }
+
+                            .p-post__linkTitle {
+                                font-size: 1.6rem;
+                                line-height: 1.8em;
+                                color: $col_dblue;
+                                font-weight: 600;
+                                max-width: calc(100% - 100px);
+
+                            }
+
+                            .p-post__linkMore {
+                                position: absolute;
+                                top: 0;
+                                bottom: 0;
+                                right: 10px;
+                                margin: auto;
+                                display: flex;
+                                align-items: center;
+
+                                &::after {
+                                    content: "more";
+                                    @include en;
+                                    font-size: 1.6rem;
+                                    color: $col_dblue;
+                                }
+                            }
+                        }
+                    }
+
+                    .p-post__postWrap {
+                        width: 100%;
+
+                        .p-post__postDate {
+                            font-size: 1.2rem;
+                            color: $col_dblue;
+                            margin-bottom: 10px;
+                        }
+
+                        .p-post__postCat {
+                            background-color: $col_lblue;
+                            color: white;
+                            font-size: 1rem;
+                            text-align: center;
+                            min-width: 120px;
+                            padding: 5px 10px;
+                            box-sizing: border-box;
+                            display: table;
+                        }
+
+                        .p-post__postTitle {
+                            font-size: 2.2rem;
+                            line-height: 1.8em;
+                            color: $col_dblue;
+                            font-weight: 600;
+                            margin: 30px 0;
+
+                            @include sp {
+                                font-size: 1.8rem;
+                                margin: 20px 0;
+                            }
+                        }
+
+                        .p-post__postContent {
+                            p {
+                                font-size: 1.6rem;
+                                line-height: 2em;
+
+                                @include sp {
+                                    font-size: 1.4rem;
+                                }
+                            }
+
+                            img {
+                                max-width: 100%;
+                                height: auto;
+                                align-self: flex-start;
+                            }
+                        }
+
+                    }
+                }
+
+                .p-post__pager {
+                    margin-top: 100px;
+                    position: relative;
+                    min-height: 16px;
+
+                    @include tab {
+                        margin-top: 60px;
+                    }
+
+                    .p-post__pagerNum {
+                        font-size: 1.6rem;
+                        margin: auto;
+                        text-align: center;
+                        color: $col_dblue;
+                    }
+
+                    .p-post__pagerArrow {
+                        position: absolute;
+                        top: 0;
+                        bottom: 0;
+                        margin: auto;
+                        max-width: 40%;
+
+                        a {
+                            font-size: 1.2rem;
+                            display: flex;
+
+                            &::before,
+                            &::after {
+                                width: 6px;
+                                height: 12px;
+                                display: block;
+                                transform: scaleY(1.6);
+                            }
+                        }
+
+
+                        &.p-post__pagerArrow--prev {
+                            left: 0;
+
+                            a {
+                                &::before {
+                                    content: "＜";
+                                    margin-right: 20px;
+                                    margin-left: 5px;
+                                }
+                            }
+
+                        }
+
+                        &.p-post__pagerArrow--next {
+                            right: 0;
+
+                            a {
+                                &::after {
+                                    content: "＞";
+                                    margin-left: 20px;
+                                    margin-right: 5px;
+                                }
+                            }
+
+                        }
+                    }
+
+                }
+
+                .c--moreBtn {
+                    margin-top: 60px;
+                }
+            }
+
+            .p-post__aside {
+                max-width: 180px;
+
+                @include tab {
+                    width: 100%;
+                    max-width: initial;
+                    display: flex;
+                    justify-content: space-between;
+                }
+
+                .p-post__asideList {
+                    @include tab {
+                        width: 45%;
+                    }
+
+                    .p-post__asideTitle {
+                        padding-bottom: 10px;
+                        display: flex;
+                        align-items: center;
+                        font-size: 1.6rem;
+                        color: $col_dblue;
+                        border-bottom: 1px solid rgba($col_vdblue, .3);
+                        @include en;
+                        font-weight: bold;
+
+                        &:after {
+                            content: "";
+                            width: 23px;
+                            height: 9px;
+                            display: block;
+                            background-image: url(../img/philosophy/stage_icon.svg);
+                            background-repeat: no-repeat;
+                            background-size: auto 100%;
+                            margin-left: 5px;
+
+                        }
+                    }
+
+                    &.p-post__asideList--cat {
+                        margin-bottom: 60px;
+
+                        .p-post__asideLink {
+                            .p-post__asideCard {
+                                border-bottom: 1px solid rgba($col_vdblue, .3);
+
+                                a {
+                                    padding: 20px 0;
+                                    font-size: 1.2rem;
+                                    line-height: 1.6em;
+                                    display: block;
+                                }
+                            }
+                        }
+                    }
+
+                    &.p-post__asideList--date {
+
+                        .p-post__asideLink {
+                            border-bottom: 1px solid rgba($col_vdblue, .3);
+
+                            .p-post__asideCard {
+                                margin-top: 20px;
+
+                                &:last-child {
+                                    margin-bottom: 20px;
+                                }
+
+                                a {
+                                    font-size: 1.3rem;
+                                    display: block;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+
+}
+
+.single-interview {
+
+    .interview__title {
+        width: 90%;
+        max-width: 1090px;
+        margin: auto;
+        border: 1px solid $col_vdblue;
+        padding: 30px;
+        box-sizing: border-box;
+        margin-bottom: 160px;
+        margin-top: 130px;
+
+        @include sp {
+            padding: 17px 0;
+            margin-top: 60px;
+            margin-bottom: 100px;
+        }
+
+        p {
+            font-size: 2.6rem;
+            @include en;
+            text-align: center;
+            color: $col_vdblue;
+            font-style: italic;
+
+            @include tab {
+                font-size: 2.2rem;
+            }
+        }
+    }
+
+    .interview__contentsInr {
+        max-width: 980px;
+        padding: 80px 65px 40px;
+        border: 1px solid $col_vdblue;
+        position: relative;
+        margin: auto;
+        box-sizing: border-box;
+        margin-bottom: 100px;
+        width: 90%;
+
+        @include tab {
+            padding: 60px 10px;
+            margin-bottom: 60px;
+        }
+
+        .p-post__label {
+            position: absolute;
+            box-sizing: border-box;
+            background-repeat: no-repeat;
+
+            @include nottab {
+                top: -35px;
+                left: -21px;
+                width: 570px;
+                height: 80px;
+                padding-bottom: 10px;
+                background-image: url(../img/post/label_bg_pc.svg);
+            }
+
+            @include tab {
+                width: 320px;
+                height: 60px;
+                background-image: url(../img/post/label_bg_sp.svg);
+                top: -28px;
+                left: -9px;
+                padding-bottom: 4px;
+            }
+
+            .p-post__labelText {
+                height: 100%;
+                width: 100%;
+                box-sizing: border-box;
+                padding-left: 81px;
+                display: flex;
+                align-items: center;
+
+                @include tab {
+                    padding-left: 30px;
+                }
+
+                p {
+                    color: white;
+                    font-size: 2.4rem;
+                    @include en;
+                    font-style: italic;
+
+                    @include tab {
+                        font-size: 2.2rem;
+                    }
+
+                    span {
+                        font-size: 4rem;
+                    }
+                }
+            }
+        }
+
+        .interview__contentsBody {
+
+            p,
+            a {
+                @include sans;
+            }
+
+            .interview__contentsMainv {
+                width: 100%;
+                position: relative;
+                margin-bottom: 90px;
+
+                @include tab {
+                    margin-bottom: 60px;
+                }
+
+                img {
+                    width: 100%;
+
+                    @include tab {
+                        margin-bottom: 30px;
+                    }
+                }
+
+                .interview__contentsProf {
+                    background-color: white;
+                    width: 90%;
+                    margin: auto;
+                    position: absolute;
+                    bottom: 30px;
+                    left: 0;
+                    right: 0;
+                    padding: 20px;
+                    display: flex;
+                    justify-content: space-between;
+
+                    @include tab {
+                        position: relative;
+                        display: block;
+                        padding: 0;
+                        width: 100%;
+                        bottom: auto;
+                    }
+
+                    .interview__contentsProf--left {
+                        width: 62%;
+
+                        @include tab {
+                            width: 100%;
+                            margin-bottom: 20px;
+                        }
+                    }
+
+                    .interview__contentsProf--right {
+                        width: 35%;
+
+                        @include tab {
+                            width: 100%;
+                        }
+                    }
+
+                    .interview__contentsProf--catch {
+                        font-size: 1.8rem;
+                        color: $col_dblue;
+                        line-height: 2em;
+                        font-weight: 600;
+
+                        @include tab {
+                            font-size: 1.5rem;
+                            letter-spacing: 0;
+
+                            br {
+                                display: none;
+                            }
+                        }
+                    }
+
+                    .interview__contentsProf--pos {
+                        font-size: 1.2rem;
+                        line-height: 1.8em;
+                        margin-bottom: 16px;
+                    }
+
+                    .interview__contentsProf--name {
+                        font-size: 1.8rem;
+
+                    }
+
+                }
+
+            }
+
+            .interview__contentsDetail {
+
+                .interview__contentsCard {
+                    margin-bottom: 60px;
+
+                    .interview__contentsCard--img {
+                        width: 100%;
+                        margin-bottom: 60px;
+                    }
+
+                    .interview__contentsCard--title {
+                        display: flex;
+                        align-items: center;
+                        margin-bottom: 20px;
+
+                        @include tab {
+                            align-items: flex-start;
+                        }
+
+                        &:before {
+                            content: "";
+                            width: 45px;
+                            height: 1px;
+                            background-color: $col_dblue;
+                            display: block;
+                            margin-right: 15px;
+
+                            @include tab {
+                                width: 40px;
+                                margin-top: 10px;
+                            }
+                        }
+
+                        p {
+                            font-size: 1.4rem;
+                            color: $col_dblue;
+                            line-height: 1.6em;
+                            font-weight: 600;
+
+                            @include tab {
+                                width: calc(100% - 70px);
+                                font-size: 1.3rem;
+                            }
+                        }
+                    }
+
+                    .interview__contentsCard--text {
+                        font-size: 1.6rem;
+                        line-height: 2em;
+
+                        @include tab {
+                            font-size: 1.4rem;
+                        }
+                    }
+
+                }
+            }
+        }
+
+
+    }
+
+    .p-post__pager {
+        position: relative;
+        min-height: 16px;
+        max-width: 980px;
+        margin: auto;
+        display: block;
+        align-items: center;
+        margin-bottom: 160px;
+        width: 90%;
+
+        @include tab {
+            margin-top: 60px;
+            margin-bottom: 100px;
+        }
+
+        .c--moreBtn {
+            @include tab {
+                width: 140px;
+            }
+
+            &::after {
+                @include tab {
+                    width: 25px;
+                    height: 9px;
+                    background-repeat: no-repeat;
+                    background-size: 100% auto;
+                }
+
+            }
+        }
+
+        .p-post__pagerNum {
+            font-size: 1.6rem;
+            margin: auto;
+            text-align: center;
+            color: $col_dblue;
+        }
+
+        .p-post__pagerArrow {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            max-width: 40%;
+            height: 17px;
+
+            a {
+                font-size: 1.2rem;
+                display: flex;
+
+                &::before,
+                &::after {
+                    width: 6px;
+                    height: 12px;
+                    display: block;
+                    transform: scaleY(1.6);
+                }
+            }
+
+
+            &.p-post__pagerArrow--prev {
+                left: 0;
+
+                a {
+                    &::before {
+                        content: "＜";
+                        margin-right: 20px;
+                        margin-left: 5px;
+                    }
+                }
+
+            }
+
+            &.p-post__pagerArrow--next {
+                right: 0;
+
+                a {
+                    &::after {
+                        content: "＞";
+                        margin-left: 20px;
+                        margin-right: 5px;
+                    }
+                }
+
+            }
+        }
+
+    }
+}

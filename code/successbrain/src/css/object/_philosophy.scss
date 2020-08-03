@@ -1,0 +1,398 @@
+.page-template-page-philosophy {
+    .c--mainv {
+        &#pyramid_intro {
+            @include notsp {
+                background-image: url(../img/philosophy/mainv_bg_pc.jpg);
+            }
+
+            @include sp {
+                background-image: url(../img/philosophy/mainv_bg_sp.jpg);
+            }
+        }
+
+        &#pyramid_management {
+            @include notsp {
+                background-image: url(../img/philosophy/management_bg_pc.jpg);
+            }
+
+            @include sp {
+                background-image: url(../img/philosophy/management_bg_sp.jpg);
+            }
+        }
+
+        .mainv__text {
+            p {
+                text-align: center;
+                color: white;
+                font-weight: normal;
+            }
+
+            .mainv__text--en {
+                font-size: 2rem;
+                margin-bottom: 40px;
+                @include en;
+                font-style: italic;
+
+                @include sp {
+                    font-size: 1.6rem;
+                    margin-bottom: 30px;
+                }
+            }
+
+            .mainv__text--sub {
+                font-size: 2.4rem;
+                margin-bottom: 20px;
+
+                @include sp {
+                    font-size: 1.6rem;
+                }
+            }
+
+            .mainv__text--main {
+                font-size: 4.4rem;
+                line-height: 1.4em;
+
+                @include sp {
+                    font-size: 3rem;
+                }
+            }
+        }
+    }
+
+    .p-philosophy__inr {
+        max-width: 854px;
+        width: 90%;
+        margin: auto;
+    }
+
+    .sec_catch {
+        padding: 80px 0;
+
+        @include sp {
+            padding: 60px 0;
+        }
+
+        .c--headingIcon {
+            margin-bottom: 80px;
+
+            @include sp {
+                margin-bottom: 60px;
+            }
+        }
+
+        .catch__text {
+            font-size: 1.6rem;
+            text-align: center;
+            line-height: 2.4em;
+            color: $col_dblue;
+
+            @include sp {
+                font-size: 1.4rem;
+                text-align: left;
+                line-height: 2em;
+
+                br {
+                    display: none;
+                }
+            }
+        }
+
+    }
+
+    #sec_pyramid {
+        background-color: $col_vlblue;
+        padding: 80px 0 140px;
+
+        @include sp {
+            padding: 60px 0 80px;
+        }
+
+        .pyramid__title--en {
+            @include en;
+            font-style: italic;
+            font-size: 2rem;
+            margin-bottom: 15px;
+            color: $col_dblue;
+            text-align: center;
+            font-weight: bold;
+
+            @include tab {
+                font-size: 1.6rem;
+            }
+        }
+
+        .pyramid__title--jp {
+            font-size: 4rem;
+            font-weight: normal;
+            text-align: center;
+            color: $col_dblue;
+            font-weight: 500;
+
+            @include tab {
+                font-size: 2.8rem;
+            }
+        }
+
+        .pyramid__border {
+            width: 2px;
+            height: 48px;
+            display: block;
+            margin: 50px auto;
+            background-color: $col_dblue;
+
+            @include sp {
+                height: 40px;
+            }
+        }
+
+        .pyramid__picture {
+            display: block;
+            margin: auto;
+            margin-bottom: 100px;
+
+            @include sp {
+                margin-bottom: 60px;
+            }
+        }
+
+        .pyramid__bottomText {
+            padding: 26px 50px;
+            display: table;
+            max-width: 100%;
+            border-top: 1px solid $col_dblue;
+            border-bottom: 1px solid $col_dblue;
+            margin: auto;
+
+            @include sp {
+                padding: 25px 0;
+                width: 100%;
+            }
+
+            p {
+                text-align: center;
+                color: $col_dblue;
+            }
+
+            .pyramid__bottomText--sub {
+                font-size: 1.4rem;
+            }
+
+            .pyramid__bottomText--main {
+                font-size: 1.8rem;
+                margin-bottom: 10px;
+                line-height: 2em;
+
+                @include sp {
+                    font-size: 1.6rem;
+                }
+            }
+        }
+    }
+
+    #sec_stage {
+        .stage__cell {
+            padding: 100px 0 140px;
+
+            @include sp {
+                padding: 60px 0 80px;
+            }
+
+            &:nth-child(odd) {
+                background-color: $col_vlblue;
+            }
+
+            .stage__title {
+                .stage__titleNum {
+                    display: block;
+                    margin: auto;
+                    margin-bottom: 30px;
+
+                    @include sp {
+                        margin-bottom: 26px;
+                    }
+                }
+
+                .stage__titleText {
+                    font-size: 2.6rem;
+                    text-align: center;
+                    color: $col_dblue;
+                    font-weight: normal;
+
+                    @include tab {
+                        font-size: 1.6rem;
+                    }
+                }
+
+                &::after {
+                    content: "";
+                    width: 2px;
+                    height: 48px;
+                    display: block;
+                    margin: 50px auto;
+                    background-color: $col_dblue;
+
+                    @include sp {
+                        height: 35px;
+                        margin: 25px auto;
+
+                    }
+                }
+            }
+
+            .stage__catch {
+                font-size: 3.8rem;
+                text-align: center;
+                color: $col_dblue;
+                margin-bottom: 60px;
+                line-height: 1.6em;
+
+                @include sp {
+                    font-size: 2rem;
+                    margin-bottom: 40px;
+                }
+            }
+
+            .stage__list {
+                width: fit-content;
+                max-width: 500px;
+                margin: auto;
+
+                &::after {
+                    content: "";
+                    height: 38px;
+                    width: 30px;
+                    background-image: url(../img/philosophy/stage_arrow.svg);
+                    background-size: auto 100%;
+                    background-position: right;
+                    background-repeat: no-repeat;
+                    display: block;
+                    margin: auto;
+                    margin-top: 40px;
+                    margin-bottom: 60px;
+
+                    @include sp {
+                        margin: 30px auto;
+                    }
+                }
+
+                .stage__listCard {
+                    display: flex;
+                    margin-bottom: 20px;
+
+                    &::before {
+                        content: "";
+                        width: 37px;
+                        height: 21px;
+                        display: block;
+                        background-image: url(../img/cmn/logo_icon.svg);
+                        margin-right: 24px;
+                        background-size: cover;
+                        background-repeat: no-repeat;
+
+                        @include sp {
+                            width: 26px;
+                            height: 15.5px;
+                        }
+                    }
+
+                    p {
+                        font-size: 2.2rem;
+                        color: $col_dblue;
+
+                        @include sp {
+                            font-size: 1.6rem;
+                        }
+                    }
+                }
+            }
+
+            .stage__example {
+                .stage__exampleTitle {
+                    padding-bottom: 13px;
+                    border-bottom: 2px solid $col_dblue;
+                    font-size: 1.6rem;
+                    display: flex;
+                    justify-content: center;
+                    font-weight: normal;
+                    color: $col_dblue;
+
+                    @include sp {
+                        font-size: 1.4rem;
+                    }
+
+                    &:before,
+                    &:after {
+                        content: "";
+                        width: 38px;
+                        height: 15px;
+                        display: block;
+                        background-image: url(../img/philosophy/stage_icon.svg);
+                        background-repeat: no-repeat;
+                        background-size: auto 100%;
+                    }
+
+                    &:before {
+                        margin-right: 14px;
+                    }
+
+                    &:after {
+                        margin-left: 14px;
+                    }
+                }
+            }
+
+            .stage__exampleList {
+                width: fit-content;
+                max-width: 700px;
+                margin: auto;
+                margin-top: 50px;
+                margin-bottom: 80px;
+
+                @include tab {
+                    margin-top: 30px;
+                    margin-bottom: 40px;
+                }
+
+                tr {
+
+                    @include tab {
+                        display: flex;
+                        flex-direction: column;
+
+                        &:not(:last-of-type) {
+                            margin-bottom: 30px;
+
+                        }
+                    }
+
+                    th {
+                        font-size: 1.8rem;
+                        color: $col_dblue;
+                        text-align: left;
+                        font-weight: 600;
+                        padding-bottom: 24px;
+
+                        @include tab {
+                            padding-bottom: 15px;
+                        }
+                    }
+
+                    td {
+                        font-size: 1.6rem;
+                        color: $col_dblue;
+                        text-align: left;
+                        font-weight: 400;
+
+                        &::before {
+                            content: "…";
+                            color: $col_dblue;
+                            font-size: 1.6rem;
+                            margin-left: 12px;
+                            margin-right: 20px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

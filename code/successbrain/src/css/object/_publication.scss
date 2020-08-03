@@ -1,0 +1,237 @@
+.page-template-page-publication {
+    .p-content__inr {
+        max-width: 854px;
+        margin: auto;
+        width: 90%;
+    }
+
+    .publication__beginning {
+        padding: 80px 0;
+
+        @include sp {
+            padding: 60px 0;
+        }
+
+        .c--headingIcon {
+            margin-bottom: 80px;
+
+            @include sp {
+                margin-bottom: 60px;
+            }
+        }
+
+        .publication__beginningTitle {
+            font-size: 2.8rem;
+            line-height: 2em;
+            color: $col_dblue;
+            margin-bottom: 80px;
+            text-align: center;
+            font-weight: 500;
+
+            @include sp {
+                font-size: 1.8rem;
+                margin-bottom: 60px;
+            }
+        }
+
+        .publication__beginningTitle--sub {
+            font-size: 1.4rem;
+            text-align: center;
+            color: $col_dblue;
+            margin-bottom: 80px;
+
+            @include sp {
+                font-size: 1.2rem;
+            }
+        }
+
+        .beginning__content {
+            width: 100%;
+
+            .beginning__contentTitle {
+                font-size: 2rem;
+                color: $col_dblue;
+                padding-bottom: 10px;
+                border-bottom: .5px solid $col_dblue;
+                display: flex;
+                font-weight: 500;
+                margin-bottom: 50px;
+
+                @include sp {
+                    margin-bottom: 40px;
+                }
+
+                &::after {
+                    content: "";
+                    width: 38px;
+                    height: 15px;
+                    display: block;
+                    background-image: url(../img/philosophy/stage_icon.svg);
+                    background-repeat: no-repeat;
+                    background-size: auto 100%;
+                    margin-left: 14px;
+                }
+            }
+
+            .beginning__contentMain {
+                display: flex;
+                flex-wrap: wrap;
+
+                .beginning__contentMain--left,
+                .beginning__contentMain--right {
+                    width: 50%;
+
+                    @include sp {
+                        width: 100%;
+                    }
+                }
+
+                .beginning__contentMain--left {
+                    img {
+                        display: block;
+                        margin: auto;
+                        max-width: 240px;
+
+                        @include sp {
+                            max-width: 180px;
+                            margin-bottom: 35px;
+                        }
+                    }
+
+                }
+
+                .beginning__contentMain--right {
+                    .beginning__contentMain--rightDetail {
+                        font-size: 1.6rem;
+                        line-height: 2em;
+                        margin-bottom: 40px;
+
+                        @include sp {
+                            font-size: 1.4rem;
+
+                            br {
+                                display: none;
+                            }
+                        }
+                    }
+
+                    .beginning__contentMain--rightName {
+                        font-size: 1.4rem;
+                        line-height: 2em;
+                        text-align: right;
+
+                        span {
+                            font-size: 1.8rem;
+                            font-weight: 600;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .publication__tasks {
+        background-color: $col_vlblue;
+        padding: 80px 0;
+
+        .publication__tasksTitle {
+            display: flex;
+            align-items: center;
+            margin-bottom: 45px;
+            justify-content: space-between;
+
+            p {
+                font-size: 1.8rem;
+                text-align: center;
+                color: $col_dblue;
+                font-weight: 500;
+            }
+
+            &:before,
+            &::after {
+                content: "";
+                width: calc((100% - 254px) / 2);
+                display: block;
+                height: 2px;
+                background-color: $col_dblue;
+
+                @include sp {
+                    width: calc((100% - 200px) / 2);
+                }
+            }
+        }
+
+        .publication__tasksContent {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+
+            @include sp {
+                max-width: 260px;
+                margin: auto;
+            }
+
+            .publication__tasksCell {
+                width: 30%;
+
+                @include sp {
+                    width: 100%;
+
+                    &:not(:last-child) {
+                        margin-bottom: 60px;
+                    }
+                }
+
+                .publication__tasksCellNum {
+                    display: block;
+                    margin: auto;
+                    margin-bottom: 26px;
+                }
+
+                .c--headingIcon {
+                    margin-bottom: 40px;
+
+                    @include sp {
+                        height: 62px;
+                        width: 124px;
+                    }
+                }
+
+                .publication__tasksCellName {
+                    font-size: 1.6rem;
+                    text-align: center;
+                    color: $col_dblue;
+                    padding: 24px 0;
+                    border-top: 1px solid $col_dblue;
+                    border-bottom: 1px solid $col_dblue;
+                }
+            }
+        }
+    }
+
+    .publication__detail {
+        padding: 80px 0 100px;
+
+        @include sp {
+            padding-top: 60px;
+        }
+
+        .publication__detailText {
+            margin-bottom: 80px;
+
+            p {
+                font-size: 1.6rem;
+                line-height: 2em;
+
+                @include sp {
+                    font-size: 1.4rem;
+                }
+
+                &:not(:last-child) {
+                    margin-bottom: 40px;
+                }
+            }
+        }
+
+    }
+}

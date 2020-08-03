@@ -1,0 +1,54 @@
+.page-template-page-privacy {
+    #sec_privacy {
+        padding: 80px 0 120px;
+
+        @include sp {
+            padding: 60px 0 100px;
+        }
+
+        .privacy__inr {
+            max-width: 900px;
+            width: 90%;
+            margin: auto;
+
+            .c--headingIcon {
+                margin-bottom: 120px;
+
+                @include sp {
+                    margin-bottom: 80px;
+                }
+            }
+
+            .privacy__list {
+                margin-bottom: 80px;
+
+                .privacy__listCell {
+                    &:not(:last-child) {
+                        margin-bottom: 60px;
+
+                    }
+
+                    dt {
+                        font-size: 2rem;
+                        line-height: 1.6em;
+                        margin-bottom: 30px;
+                        color: $col_dblue;
+
+                        @include sp {
+                            font-size: 1.8rem;
+                        }
+                    }
+
+                    dd {
+                        font-size: 1.6rem;
+                        line-height: 2em;
+
+                        @include sp {
+                            font-size: 1.4rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

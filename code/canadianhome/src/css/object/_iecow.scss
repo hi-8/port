@@ -1,0 +1,614 @@
+.page-template-page-iecow {
+    .c--navigation {
+        border-bottom: none;
+    }
+
+    #sec_iecow {
+        padding-top: 20px;
+    }
+
+    .iecow_mainv {
+        max-width: 1284px;
+        width: 93.99%;
+        margin: auto;
+        display: flex;
+        border: 5px solid $col_mred;
+        padding: 8px;
+        box-sizing: border-box;
+        position: relative;
+        margin-bottom: 200px;
+
+        @include tab {
+            margin-bottom: 60px;
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            width: calc(100% - 16px);
+            height: calc(100% - 16px);
+            border: 3px solid $col_mred;
+            box-sizing: border-box;
+        }
+
+        .iecow_mainv-inr {
+            width: 90%;
+            max-width: 1070px;
+            display: flex;
+            justify-content: center;
+            position: relative;
+            margin: auto;
+            padding: 50px 0;
+
+            @include sp {
+                flex-direction: column-reverse;
+                padding: 25px 0;
+            }
+
+            img {
+                align-self: center;
+            }
+
+            .iecow_mainv-left {
+                width: 33.3%;
+                margin-right: 40px;
+                opacity: 0;
+
+                @include tab {
+                    opacity: 1;
+                    display: block;
+                    margin: auto;
+                    margin-top: 30px;
+                    width: 50%;
+                }
+            }
+
+            .iecow_mainv-right {
+                width: 47.8%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+
+                @include sp {
+                    width: 100%;
+                }
+
+                .iecow_mainv-right-img01 {
+                    margin-bottom: 40px;
+                    opacity: 0;
+
+                    @include tab {
+                        opacity: 1;
+                    }
+
+                    @include sp {
+                        width: 80%;
+                        display: block;
+                        margin-left: 0;
+                        margin-right: auto;
+                        margin-bottom: 20px;
+                    }
+                }
+
+                .iecow_mainv-right-img02 {
+                    opacity: 0;
+
+                    @include tab {
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+
+    }
+
+    [id*=iecow_sec] {
+        @include sp {
+            background-position: center;
+            background-repeat: no-repeat;
+            background-color: rgba(255, 255, 255, 0.8);
+            background-blend-mode: lighten;
+        }
+    }
+
+    .iecow_sec-inr {
+        max-width: 1130px;
+        width: 95%;
+        margin: auto;
+        position: relative;
+
+        @include sp {
+            width: 90%;
+        }
+
+        .iecow_sec-mainimg {
+            align-self: flex-end;
+            position: absolute;
+
+            @include tab {
+                position: relative;
+            }
+
+        }
+
+        .iecow_sec-title {
+            display: flex;
+            margin-bottom: 50px;
+
+            @include tab {
+                margin-bottom: 20px;
+            }
+
+            .iecow_sec-title--hari {
+                margin-right: 20px;
+
+                @include tab {
+                    width: 100px;
+                }
+
+                @include sp {
+                    width: 60px;
+                    margin-right: 10px;
+                }
+            }
+
+            .iecow_sec-title--text {
+                font-size: 4.7rem;
+                font-weight: 900;
+                line-height: 1.5em;
+                letter-spacing: 0.05em;
+                color: $col_mred;
+                @include jp;
+                transform: scale(.6);
+
+                @include tab {
+                    font-size: 3rem;
+                }
+
+                @include sp {
+                    font-size: 1.9rem;
+                }
+            }
+        }
+
+        .iecow_sec-item {
+            opacity: 0;
+        }
+
+        .iecow_catch-text {
+            font-size: 1.6rem;
+            font-weight: 600;
+            line-height: 4.6rem;
+            color: $col_mred;
+
+            @include sp {
+                font-size: 1.4rem;
+                line-height: 2.4rem;
+            }
+
+            span {
+                letter-spacing: 0;
+            }
+        }
+
+        .iecow_sec-text {
+            font-size: 1.6rem;
+            font-weight: 600;
+            line-height: 3rem;
+            color: $col_mred;
+            margin-bottom: 60px;
+
+            @include tab {
+                margin-bottom: 30px;
+            }
+
+            @include sp {
+                font-size: 1.4rem;
+                line-height: 2em;
+
+                br {
+                    display: none;
+                }
+            }
+
+            span {
+                letter-spacing: 0;
+            }
+        }
+
+        .iecow_sec-img {
+            opacity: 0;
+        }
+
+        .iecow_sec-detail {
+            max-width: 530px;
+            width: 100%;
+            // margin-left: auto;
+        }
+
+        .iecow_sec-comment {
+            display: flex;
+
+            .iecow_sec-comment--icon {
+                align-self: flex-end;
+                margin-left: 10px;
+            }
+        }
+
+        .iecow_sec-baloon {
+            position: relative;
+            display: inline-block;
+            margin-right: 15px;
+            padding: 26px;
+            min-width: 120px;
+            max-width: 100%;
+            font-size: 16px;
+            background-color: $col_lred;
+            border: solid 3px $col_mred;
+            box-sizing: border-box;
+
+            @include sp {
+                padding: 20px;
+            }
+
+            &:before {
+                content: "";
+                position: absolute;
+                bottom: 30px;
+                right: -24px;
+                margin-top: -12px;
+                border: 12px solid transparent;
+                border-left: 12px solid $col_lred;
+                z-index: 2;
+            }
+
+            &:after {
+                content: "";
+                position: absolute;
+                bottom: 28px;
+                right: -30px;
+                margin-top: -14px;
+                border: 14px solid transparent;
+                border-left: 14px solid $col_mred;
+                z-index: 1;
+            }
+
+            p {
+                color: $col_mred;
+                font-size: 1.4rem;
+                line-height: 2.6rem;
+                font-weight: 600;
+
+                @include sp {
+                    font-size: 1.2rem;
+                }
+            }
+        }
+    }
+
+    #iecow_sec01 {
+        margin-bottom: 200px;
+
+        @include tab {
+            margin-bottom: 80px;
+        }
+
+        .iecow_sec-inr {
+            display: flex;
+            justify-content: space-between;
+
+            @include tab {
+                display: block;
+            }
+
+            .iecow_sec-img {
+                align-self: flex-end;
+            }
+
+            .iecow_sec-mainimg {
+                width: 53%;
+                right: 0;
+
+                @include tab {
+                    display: block;
+                    margin: auto;
+                }
+
+                @include sp {
+                    margin-top: 30px;
+                    width: 70%;
+                }
+
+            }
+        }
+    }
+
+    #iecow_sec02 {
+        margin-bottom: 200px;
+
+        @include tab {
+            margin-bottom: 80px;
+        }
+
+        @include sp {
+            background-image: url(../img/iecow/sec02_img01.jpg);
+            background-size: 90% auto;
+        }
+
+        .iecow_sec-inr {
+            display: flex;
+            justify-content: space-between;
+            flex-direction: row-reverse;
+
+            @include tab {
+                flex-direction: column-reverse;
+            }
+
+
+
+            .iecow_sec-mainimg {
+                width: 53.24%;
+                left: 0;
+
+                @include sp {
+                    display: none;
+                }
+            }
+
+            .iecow_sec-detail {
+                margin-left: auto;
+
+                @include tab {
+                    width: 50%;
+                    margin-left: 0;
+                }
+
+                @include sp {
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    #iecow_sec03 {
+        margin-bottom: 200px;
+
+        @include tab {
+            margin-bottom: 80px;
+        }
+
+        @include sp {
+            background-image: url(../img/iecow/sec03_img01.jpg);
+            background-size: 90% auto;
+        }
+
+        .iecow_sec-inr {
+            display: flex;
+            justify-content: space-between;
+
+            @include sp {
+                flex-direction: column-reverse;
+            }
+
+            .iecow_sec-mainimg {
+                width: 51.59%;
+                right: 0;
+
+                @include tab {
+                    position: absolute;
+                }
+
+                @include sp {
+                    display: none;
+                }
+
+            }
+
+            .iecow_sec-wrap {
+                @include tab {
+                    width: 100%;
+
+                }
+            }
+
+            .iecow_sec-detail {
+                @include tab {
+                    width: 50%;
+                }
+
+                @include sp {
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    #iecow_sec04 {
+        margin-bottom: 200px;
+
+        @include tab {
+            margin-bottom: 80px;
+        }
+
+        @include sp {
+            background-image: url(../img/iecow/sec04_img01.jpg);
+            background-size: auto 90%;
+        }
+
+        .iecow_sec-inr {
+            display: flex;
+            justify-content: space-between;
+            flex-direction: row-reverse;
+            max-width: 990px;
+
+            @include sp {
+                flex-direction: column-reverse;
+            }
+
+            .iecow_sec-mainimg {
+                width: 27.9%;
+                left: 0;
+
+                @include sp {
+                    display: none;
+                }
+            }
+
+            .iecow_sec-detail {
+                margin-left: auto;
+
+                @include tab {
+                    width: 80%;
+                    margin-left: 0;
+                }
+
+                @include sp {
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    #iecow_sec05 {
+        margin-bottom: 200px;
+
+        @include tab {
+            margin-bottom: 80px;
+        }
+
+        @include sp {
+            background-image: url(../img/iecow/sec05_img01.jpg);
+            background-size: 90% auto;
+        }
+
+        .iecow_sec-inr {
+            display: flex;
+            justify-content: space-between;
+
+            @include tab {
+                flex-direction: column-reverse;
+            }
+
+
+
+            .iecow_sec-mainimg {
+                width: 44.24%;
+                right: 0;
+
+                @include tab {
+                    display: block;
+                    margin: auto;
+                    margin-top: 40px;
+                }
+
+                @include sp {
+                    display: none;
+                }
+            }
+
+            .iecow_sec-detail {
+                @include tab {
+                    width: 100%;
+                    max-width: 100%;
+                }
+            }
+        }
+    }
+
+    #iecow_sec06 {
+        margin-bottom: 200px;
+
+        @include tab {
+            margin-bottom: 80px;
+        }
+
+        @include sp {
+            background-image: url(../img/iecow/sec06_img01.jpg);
+            background-size: 90% auto;
+        }
+
+        .iecow_sec-inr {
+            display: flex;
+            justify-content: space-between;
+            flex-direction: row-reverse;
+
+            @include tab {
+                display: block;
+            }
+
+
+
+            .iecow_sec-mainimg {
+                width: 38%;
+                left: 0;
+
+                @include tab {
+                    position: absolute;
+                    bottom: 0;
+                    right: 0;
+                    left: auto;
+                }
+
+                @include sp {
+                    display: none;
+                }
+            }
+
+            .iecow_sec-detail {
+                margin-left: auto;
+
+                @include tab {
+                    width: 50%;
+                    margin-left: 0;
+                }
+
+                @include sp {
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    #sec_contact {
+        margin-bottom: 200px;
+
+        @include tab {
+            margin-bottom: 80px;
+        }
+
+        .contact_inr {
+
+            .contact_inr-img {
+                position: relative;
+                max-width: 560px;
+                width: 90%;
+                margin: auto;
+                margin-bottom: 110px;
+                padding-top: 40px;
+                padding-left: 24px;
+                box-sizing: border-box;
+
+                @include sp {
+                    margin-bottom: 50px;
+                }
+
+                .contact_inr-img1 {
+                    display: block;
+                    position: relative;
+                    opacity: 0;
+                }
+
+                .contact_inr-img2 {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    opacity: 0;
+
+                    @include sp {
+                        width: 180px;
+                    }
+                }
+            }
+        }
+    }
+}

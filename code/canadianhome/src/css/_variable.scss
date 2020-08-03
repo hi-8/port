@@ -1,0 +1,141 @@
+$la:1600px;
+$tab_la:1200px;
+$nottab:813px;
+$tab:812px;
+$tab_port:1024px;
+$nottab_port:1025px;
+$max:1440px;
+$sp:480px;
+$notsp: 481px;
+$col_lgray:#EFEFEF;
+$col_mgray:#C6C6C6;
+$col_dgray:#707070;
+$col_lred:#FAF2F2;
+$col_mred:#980E1A;
+
+@font-face {
+    font-family: 'amusaf';
+    src: url('../font/amusaf.eot'),
+        url('../font/amusaf.eot?#iefix') format('embedded-opentype'),
+        url('../font/amusaf.woff') format('woff'),
+        url('../font/amusaf.ttf') format('truetype'),
+        url('../font/amusaf.svg#svgFontName') format('svg');
+}
+
+@mixin la {
+    @media (min-width: ($la)) {
+        @content;
+    }
+}
+
+@mixin tab {
+    @media (max-width: ($tab)) {
+        @content;
+    }
+}
+
+@mixin tab_la {
+    @media (max-width: ($tab_la)) {
+        @content;
+    }
+}
+
+@mixin tab_port {
+    @media screen and (max-width: ($tab_port)) {
+        @content;
+
+    }
+}
+
+@mixin nottab_port {
+    @media screen and (min-width:($nottab_port)) {
+        @content;
+    }
+}
+
+@mixin dev-tab {
+    @media (max-device-width: ($tab)) {
+        @content;
+    }
+}
+
+@mixin notdev-tab {
+    @media (min-device-width: ($tab)) {
+        @content;
+    }
+}
+
+@mixin nottab {
+    @media (min-width: ($nottab)) {
+        @content;
+    }
+}
+
+@mixin sp {
+    @media (max-width: ($sp)) {
+        @content;
+    }
+}
+
+@mixin notsp {
+    @media (min-width: ($notsp)) {
+        @content;
+    }
+}
+
+@mixin ie {
+    @media all and (-ms-high-contrast: none) {
+        @content;
+    }
+}
+
+@mixin edge {
+    @supports (-ms-ime-align:auto) {
+        @content;
+    }
+}
+
+// ウィンドウ最大幅
+@mixin max {
+    width: 100%;
+    max-width: $max;
+    margin: auto;
+}
+
+@mixin feature {
+    font-feature-settings: "palt"1;
+}
+
+//フォント設定
+
+@mixin en {
+    font-family: 'amusaf';
+    letter-spacing: 0em;
+}
+
+@mixin en2 {
+    // font-family: lato;
+}
+
+@mixin jp {
+    font-family: noto-sans-cjk-jp, sans-serif;
+    font-weight: 900;
+}
+
+.pc {
+    @include tab {
+        display: none;
+    }
+}
+
+.notdev-tab {
+    @include notdev-tab {
+        display: none;
+    }
+}
+
+.sp {
+    @include nottab {
+        display: none;
+    }
+}

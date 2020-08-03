@@ -1,0 +1,340 @@
+.page-template-page-house {
+    .house__mainv {
+        width: 100%;
+        overflow: hidden;
+        padding-top: 120px;
+        margin-bottom: 160px;
+
+        @include sp {
+            padding-top: 60px;
+            margin-bottom: 80px;
+        }
+
+        .house__mainv--inr {
+            max-width: 1000px;
+            width: 90%;
+            margin: auto;
+            position: relative;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+
+            .house__mainv--text {
+
+                @include notsp {
+                    width: 50%;
+                    position: absolute;
+                    left: 0;
+                }
+
+                @include sp {
+                    width: 100%;
+                }
+
+                .house__mainv--num {
+                    @include en;
+                    font-size: 1.8rem;
+                    margin-bottom: 30px;
+
+                    @include sp {
+                        margin-bottom: 10px;
+                    }
+                }
+
+                .house__mainv--title {
+                    font-size: 5.2rem;
+                    margin-bottom: 70px;
+                    font-weight: 600;
+
+                    @include sp {
+                        font-size: 3.4rem;
+                        margin-bottom: 20px;
+                    }
+                }
+
+                .house__mainv--detail {
+                    font-size: 1.6rem;
+                    font-weight: 600;
+                    @include feature;
+                    margin-bottom: 18px;
+                    line-height: 1.8em;
+                }
+
+                .house__mainv--price {
+
+                    font-size: 1.6rem;
+                    font-weight: 600;
+
+                    span {
+                        @include en2;
+                        font-size: 3.3rem;
+                    }
+                }
+            }
+
+            .house__mainv--img {
+                position: relative;
+                top: 0;
+                left: 50%;
+
+                @include sp {
+                    left: 0;
+                    margin-top: 40px;
+                }
+            }
+        }
+    }
+
+    .house__article {
+        max-width: 1000px;
+        width: 90%;
+        margin: auto;
+
+        .house__article--cell {
+            width: 100%;
+            margin-bottom: 150px;
+
+            @include sp {
+                margin-bottom: 100px;
+            }
+
+            .house__article--heading {
+                margin-bottom: 40px;
+
+                @include sp {
+                    margin-bottom: 30px;
+                }
+
+                .house__article--point {
+                    color: $col_mred;
+                    @include en;
+                    font-size: 2rem;
+                    text-align: center;
+                    margin-bottom: 5px;
+                }
+
+                .house__article--num {
+                    background-image: url(../img/post/house_heading.svg);
+                    background-size: cover;
+                    width: 65px;
+                    height: 39px;
+                    background-repeat: no-repeat;
+                    display: block;
+                    margin: auto;
+                    position: relative;
+
+                    p {
+                        color: white;
+                        @include en;
+                        font-size: 1.8rem;
+                        position: absolute;
+                        top: 60%;
+                        left: 52%;
+                        transform: translateY(-50%) translateX(-50%);
+                        letter-spacing: .1em;
+                    }
+                }
+            }
+
+            .house__article--title {
+                text-align: center;
+                line-height: 2em;
+                font-size: 3rem;
+                font-weight: 600;
+                margin-bottom: 60px;
+
+                @include sp {
+                    font-size: 2rem;
+                    margin: auto;
+                    margin-bottom: 30px;
+
+                    br {
+                        display: none;
+                    }
+                }
+            }
+
+            .house__article--detail {
+                width: 100%;
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                justify-content: space-between;
+
+                .house__article--detailImg {
+                    width: 50%;
+                    align-self: center;
+
+                    @include sp {
+                        width: 100%;
+                        margin-bottom: 30px;
+                    }
+                }
+
+                .house__article--detailText {
+                    font-size: 1.6rem;
+                    line-height: 2.2em;
+                    width: 44.3%;
+                    letter-spacing: .1em;
+
+                    @include sp {
+                        width: 100%;
+                        font-size: 1.4rem;
+                    }
+                }
+            }
+        }
+    }
+
+    .house__others {
+        width: 100%;
+        padding: 77px 0 130px;
+
+        @include sp {
+            padding: 60px 0;
+        }
+
+        .house__others--inr {
+            padding-top: 77px;
+            width: 90%;
+            max-width: 1000px;
+            margin: auto;
+            position: relative;
+            margin-bottom: 150px;
+
+            @include sp {
+                margin-bottom: 60px;
+                padding-top: 60px;
+            }
+
+            &::before,
+            &::after {
+                content: "";
+                height: 3px;
+                width: 100%;
+                position: absolute;
+                background-image: url(../img/cmn/border-b.jpg);
+                background-size: 100% auto;
+                background-repeat: no-repeat;
+            }
+
+            &::before {
+                top: 0;
+            }
+
+            &::after {
+                bottom: 0;
+            }
+
+            .house__others--title {
+                font-size: 5.5rem;
+                text-align: center;
+                color: $col_mred;
+                line-height: 1em;
+                margin-bottom: 30px;
+                @include en;
+
+                @include sp {
+                    font-size: 4rem;
+                }
+            }
+
+            .house__others--sub {
+                font-size: 1.6rem;
+                text-align: center;
+                font-weight: 600;
+                margin-bottom: 70px;
+
+                @include sp {
+                    margin-bottom: 50px;
+                }
+            }
+
+            .house__others--list {
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                padding: 0 30px;
+
+                @include sp {
+                    padding: 0;
+                }
+
+                .house__others--cell {
+                    width: 36.4%;
+                    margin-bottom: 57px;
+
+                    @include sp {
+                        width: 90%;
+                        margin: auto;
+                        margin-bottom: 30px;
+                        margin-left: -10px;
+                    }
+
+                    img {
+                        align-self: center;
+                    }
+
+                    .house__others--icon {
+                        width: 41.4%;
+
+                        @include sp {
+                            width: 25%;
+                        }
+                    }
+
+                    .house__others--text {
+                        font-size: 2.4rem;
+                        font-weight: 600;
+                        position: relative;
+
+                        @include sp {
+                            font-size: 1.8rem;
+                            margin-left: 20px;
+                        }
+
+                        &::after {
+                            content: "";
+                            width: 8px;
+                            height: 100%;
+                            display: inline-block;
+                            background-image: url(../img/top/house_arrow-b.svg);
+                            background-size: 100% auto;
+                            margin: auto;
+                            margin-left: 30px;
+                            -webkit-transition: all .4s;
+                            transition: all .4s;
+                            position: absolute;
+                            background-position: center;
+                            background-repeat: no-repeat;
+
+                            @include sp {
+                                right: -20px;
+                            }
+
+                        }
+                    }
+
+                    a {
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+
+                        @include sp {
+                            justify-content: center;
+
+                        }
+
+                        &:hover {
+                            .house__others--text {
+                                &::after {
+                                    transform: translateX(10px);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

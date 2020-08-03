@@ -1,0 +1,149 @@
+.page-template-page-statement {
+    #sec_statement {
+
+        @include nottab {
+            padding: 155px 0 176px;
+        }
+
+        @include tab {
+            padding: 100px 0 120px;
+
+        }
+
+        &::before {
+            content: "";
+            display: block;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            width: 100%;
+            height: 100vh;
+            background-repeat: no-repeat;
+            background-position: 50% 100%;
+            background-size: cover;
+
+            @include notsp {
+                background-image: url(../img/statement/mainv_bg_pc.jpg);
+            }
+
+            @include sp {
+                background-image: url(../img/statement/mainv_bg_sp.jpg);
+            }
+        }
+
+        .statement__inr {
+            max-width: 854px;
+            margin: auto;
+            width: 90%;
+
+            .c--top__link {
+                position: fixed;
+                z-index: 100;
+            }
+
+            .statement__catch--en {
+                font-style: italic;
+                color: white;
+                text-align: center;
+                @include en;
+
+                @include nottab {
+                    font-size: 3rem;
+                    margin-bottom: 100px;
+                }
+
+                @include tab {
+                    margin-bottom: 60px;
+                    font-size: 1.6rem;
+                }
+            }
+
+            .statement__catch {
+                display: block;
+                margin: auto;
+
+                @include nottab {
+                    margin-bottom: 60px;
+                }
+
+                @include tab {
+                    margin-bottom: 34px;
+                }
+            }
+
+            .statement__title {
+                text-align: center;
+                color: white;
+                line-height: 1.6em;
+
+                @include nottab {
+                    font-size: 1.8rem;
+
+                }
+
+                @include tab {
+                    font-size: 1.6rem;
+                }
+            }
+
+            .statement__icon {
+                display: block;
+
+                @include nottab {
+                    margin: 60px auto;
+
+                }
+
+                @include tab {
+                    margin: 40px auto;
+                }
+            }
+
+            .statement__texts {
+                @include nottab {
+                    margin-bottom: 120px;
+                }
+
+                @include tab {
+                    margin-bottom: 100px;
+                }
+
+                p {
+                    color: white;
+                    text-align: center;
+
+                    @include nottab {
+                        font-size: 1.8rem;
+                        line-height: 6rem;
+                    }
+
+                    @include tab {
+                        font-size: 1.4rem;
+                        line-height: 4rem;
+                    }
+
+                    &:not(:last-of-type) {
+                        @include nottab {
+                            margin-bottom: 80px;
+                        }
+
+                        @include tab {
+                            margin-bottom: 60px;
+                        }
+                    }
+                }
+
+            }
+
+            .statement__logo {
+                display: block;
+                margin: auto;
+
+                @include tab {
+                    max-width: 210px;
+                }
+            }
+        }
+    }
+}

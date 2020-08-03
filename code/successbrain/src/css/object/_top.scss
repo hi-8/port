@@ -1,0 +1,842 @@
+.home {
+    .p-section {
+        width: 100%;
+
+        &.p-section--100vh {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+        }
+
+        .p-section__inr {
+            max-width: 1000px;
+            width: 90%;
+            margin: auto;
+
+            .p-catch--en {
+                color: white;
+                font-size: 2.7rem;
+                text-align: center;
+                @include en;
+                margin-bottom: 60px;
+                font-style: italic;
+
+                @include sp {
+                    font-size: 1.6rem;
+                    margin-bottom: 40px;
+                }
+            }
+        }
+    }
+
+    #aside_nav {
+        @include tab {
+            display: none;
+        }
+
+        &.aside_nav__list {
+            position: fixed;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            right: 90px;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            z-index: 3;
+
+            .aside_nav__cell {
+                a {
+                    display: block;
+                    width: 8px;
+                    height: 8px;
+                    border-radius: 50%;
+                    border: 1px solid white;
+                    background: transparent;
+                    transition: all .4s;
+                }
+
+                &:not(:last-child) {
+                    margin-bottom: 30px;
+                }
+
+                &.aside_nav__list--active {
+                    a {
+                        background-color: white;
+                    }
+                }
+            }
+
+        }
+    }
+
+    #sec_content {
+        #sec_mainv {
+            background-size: cover;
+            background-repeat: no-repeat;
+
+            .c--top__link {
+                position: fixed;
+                z-index: 100;
+            }
+
+            .mainv__catch {
+                display: block;
+                margin: auto;
+                margin-bottom: 40px;
+
+                @include sp {
+                    margin-top: 260px;
+                }
+            }
+
+            .mainv__text {
+                font-size: 2rem;
+                text-align: center;
+                color: white;
+                margin-bottom: 60px;
+
+                @include tab {
+                    font-size: 1.5rem;
+                }
+            }
+
+            .mainv__scroll {
+                position: absolute;
+                display: block;
+                bottom: 20px;
+                left: 0;
+                right: 0;
+                margin: auto;
+
+                @include tab {
+                    display: none;
+                }
+            }
+        }
+
+        #sec_philosophy {
+            @include gradient-rad;
+            position: relative;
+
+            .philosophy__bg {
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                margin: auto;
+            }
+
+
+            .p-section__inr {
+                position: relative;
+                z-index: 2;
+
+                .philosophy__catch {
+                    display: block;
+                    margin: auto;
+                    margin-bottom: 90px;
+
+                    @include tab {
+                        margin-bottom: 50px;
+                    }
+                }
+
+                .philosophy__text {
+                    font-size: 2.2rem;
+                    line-height: 5.4rem;
+                    text-align: center;
+                    margin-bottom: 75px;
+                    color: white;
+
+                    @include sp {
+                        font-size: 1.8rem;
+                        margin-bottom: 55px;
+                    }
+                }
+            }
+        }
+
+        #sec_interview {
+            padding: 100px 0 140px;
+            @include gradient-rad;
+
+            @include sp {
+                padding: 60px 0 90px;
+            }
+
+            .p-section__inr {
+                .slick-dots {
+                    bottom: -60px;
+
+                    li {
+                        button {
+                            &:before {
+                                opacity: 1;
+                                color: white;
+                            }
+                        }
+
+                        &.slick-active {
+                            button {
+                                &:before {
+                                    color: black;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .interview__catch {
+                    display: block;
+                    margin: auto;
+                    margin-bottom: 35px;
+                }
+
+                .interview__catchText {
+                    font-size: 2.2rem;
+                    text-align: center;
+                    color: white;
+                    margin-bottom: 100px;
+                    line-height: 2em;
+
+                    @include sp {
+                        font-size: 1.4rem;
+                        text-align: left;
+                        margin-bottom: 40px;
+
+                        br {
+                            display: none;
+                        }
+                    }
+                }
+
+                .interview__group {
+
+                    @include nottab {
+                        display: flex;
+                        flex-wrap: wrap;
+                        justify-content: space-between;
+                    }
+
+                    .interview__card {
+                        width: 320px;
+                        background-color: $col_gray;
+
+                        @include sp {
+                            width: 300px;
+                            min-height: 350px;
+                            margin-right: 10px;
+                        }
+
+                        &:not(:nth-child(3n)) {
+                            @include nottab {
+                                margin-right: calc((100% - 960px)/2);
+                            }
+                        }
+
+                        >a {
+                            display: block;
+                            position: relative;
+                            box-sizing: border-box;
+                            padding: 15px;
+                            padding-bottom: 20px;
+                        }
+
+                        .interview__cardImg {
+                            width: 100%;
+                            position: relative;
+
+                            .interview__num {
+                                position: absolute;
+                                bottom: -15px;
+                                left: 0;
+
+                                p {
+                                    position: absolute;
+                                    top: 2px;
+                                    left: 10px;
+                                    font-size: 1.4rem;
+                                    color: white;
+                                    @include en;
+                                    text-transform: uppercase;
+                                    font-style: italic;
+
+                                    span {
+                                        font-size: 2.3rem;
+                                    }
+                                }
+
+                                img {
+                                    display: block;
+                                }
+                            }
+                        }
+
+                        .interview__cardBody {
+                            margin-top: 24px;
+                            padding: 0 5px;
+
+                            p {
+                                @include sans;
+                                line-height: 1.6em;
+                                word-break: break-all;
+                            }
+
+                            .interview__textTitle {
+                                color: $col_dblue;
+                                font-size: 1.2rem;
+                                margin-bottom: 10px;
+                                @include feature;
+                            }
+
+                            .interview__textDetail {
+                                font-size: 1.2rem;
+                                margin-bottom: 5px;
+                            }
+
+                            .interview__textName {
+                                font-size: 1.4rem;
+                                font-weight: 500;
+                            }
+
+                        }
+                    }
+                }
+            }
+        }
+
+        #sec_consulting {
+            padding: 100px 0 150px;
+            background-size: cover;
+            background-position: top center;
+            background-repeat: no-repeat;
+
+            @include sp {
+                padding: 60px 0 80px;
+            }
+
+            .p-section__inr {
+                .consulting__catch {
+                    display: block;
+                    margin: auto;
+                    margin-bottom: 40px;
+
+                }
+
+                .consulting__catchText {
+                    font-size: 2.8rem;
+                    text-align: center;
+                    color: white;
+                    margin-bottom: 100px;
+                    line-height: 2em;
+
+                    @include sp {
+                        font-size: 2rem;
+                        margin-bottom: 40px;
+                    }
+                }
+
+                .consulting__detail {
+                    font-size: 2.2rem;
+                    text-align: center;
+                    line-height: 5.4rem;
+                    color: white;
+                    margin-bottom: 130px;
+
+                    @include sp {
+                        font-size: 1.4rem;
+                        text-align: left;
+                        line-height: 2em;
+                        margin-bottom: 60px;
+
+                        br {
+                            display: none;
+                        }
+                    }
+                }
+
+                .consulting__stage {
+                    margin-bottom: 160px;
+
+                    @include sp {
+                        margin-bottom: 60px;
+                    }
+
+                    .consulting__stageCard {
+                        display: flex;
+                        justify-content: space-between;
+
+                        @include sp {
+                            display: block;
+                        }
+
+                        &:not(:last-child) {
+                            margin-bottom: 130px;
+
+                            @include sp {
+                                margin-bottom: 80px;
+                            }
+                        }
+
+                        .consulting__stageHead {
+                            border: 1px solid white;
+                            width: 180px;
+                            height: 180px;
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                            justify-content: center;
+
+                            @include sp {
+                                width: 100%;
+                                padding: 30px 0;
+                                height: auto;
+                            }
+
+                            .consulting__stageTitle--en {
+                                font-size: 2rem;
+                                text-align: center;
+                                color: white;
+                                margin-bottom: 16px;
+
+                                @include sp {
+                                    font-size: 1.4rem;
+                                }
+                            }
+
+                            .consulting__stageTitle--jp {
+                                font-size: 2.4rem;
+                                text-align: center;
+                                color: white;
+
+                                @include sp {
+                                    font-size: 2rem;
+                                }
+                            }
+                        }
+
+                        .consulting__stageBody {
+                            width: calc(100% - 240px);
+
+                            @include sp {
+                                width: 100%;
+                            }
+
+                            .consulting__stageTitle {
+                                font-size: 3.2rem;
+                                color: white;
+                                line-height: 1em;
+                                margin-bottom: 25px;
+
+                                @include sp {
+                                    font-size: 2.6rem;
+                                    line-height: 1.6em;
+                                    margin: 40px 0;
+                                    text-align: center;
+                                }
+                            }
+
+                            .consulting__stageContent {
+                                display: flex;
+                                flex-wrap: wrap;
+
+                                >li {
+
+                                    width: 50%;
+                                    padding: 16px;
+                                    box-sizing: border-box;
+                                    border-left: 1px solid white;
+
+                                    @include notsp {
+                                        padding-right: 0;
+                                    }
+
+                                    @include sp {
+                                        width: 100%;
+                                        padding: 0 16px;
+                                    }
+
+                                    &:nth-of-type(n+3) {
+                                        @include notsp {
+                                            margin-top: 24px;
+
+                                        }
+                                    }
+
+                                    &:not(:last-child) {
+
+                                        @include sp {
+                                            margin-bottom: 20px;
+                                        }
+                                    }
+
+                                    p {
+                                        color: white;
+                                        font-size: 1.8rem;
+
+                                        @include sp {
+                                            font-size: 1.6rem;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        #sec_client {
+            padding: 100px 0 140px;
+            background-color: $col_vdblue;
+
+            @include sp {
+                padding: 60px 0 80px;
+            }
+
+            .p-catch--en {
+                margin-bottom: 36px;
+            }
+
+            .client__catch {
+                display: block;
+                margin: auto;
+                margin-bottom: 32px;
+
+                @include sp {
+                    margin-bottom: 26px;
+                }
+            }
+
+            .client__catchSub {
+                font-size: 2rem;
+                text-align: center;
+                color: white;
+                margin-bottom: 85px;
+
+                @include sp {
+                    margin-bottom: 50px;
+                    font-size: 1.6rem;
+                }
+            }
+
+            .client__column {
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+
+                .client__list {
+                    width: 280px;
+
+                    @include sp {
+                        width: 100%;
+                    }
+
+                    li {
+                        list-style: none;
+                        font-size: 1.6rem;
+                        margin-bottom: 20px;
+                        color: white;
+                        line-height: 1.6em;
+
+                        @include sp {
+                            text-align: center;
+                        }
+                    }
+                }
+
+            }
+
+            .client__columnUnder {
+                color: white;
+                font-size: 1.4rem;
+                display: block;
+                text-align: right;
+
+                @include sp {
+                    text-align: center;
+                    margin-top: 30px;
+                }
+            }
+        }
+
+        #sec_information {
+            background-size: cover;
+            background-repeat: no-repeat;
+            padding: 180px 0;
+
+            @include sp {
+                padding: 0;
+            }
+
+            .p-section__inr {
+                background-color: rgba($col_vdblue, .8);
+                padding: 60px 0 80px;
+
+                @include sp {
+                    width: 100%;
+                }
+
+                .information__title {
+                    @include en;
+                    font-size: 4.6rem;
+                    text-align: center;
+                    color: white;
+                    margin-bottom: 60px;
+                    letter-spacing: .05em;
+
+                    @include sp {
+                        font-size: 2.8rem;
+                        margin-bottom: 40px;
+                    }
+                }
+
+                .information__inr {
+                    max-width: 820px;
+                    margin: auto;
+
+                    @include sp {
+                        width: 90%;
+                    }
+                }
+
+                .information__list {
+                    border-top: 1px solid white;
+                    width: 100%;
+
+                    .information__listCell {
+                        border-bottom: 1px solid white;
+
+                        a {
+                            padding: 24px 0;
+                            width: 100%;
+                            display: flex;
+                            flex-wrap: wrap;
+
+                            @include sp {
+                                padding: 20px 0;
+                            }
+
+                            p {
+                                color: white;
+                            }
+
+                            .information__listCell--date {
+                                font-size: 1.6rem;
+                                width: 21.2%;
+
+                                @include sp {
+                                    width: 100%;
+                                    font-size: 1.2rem;
+                                    margin-bottom: 10px;
+                                }
+                            }
+
+                            .information__listCell--title {
+                                font-size: 1.6rem;
+                                width: 78.8%;
+                                display: flex;
+                                justify-content: space-between;
+                                line-height: 1.6em;
+
+                                @include sp {
+                                    width: 100%;
+                                    font-size: 1.4rem;
+                                }
+                            }
+
+                            .information__listCell--more {
+                                @include en;
+                                font-size: 1.8rem;
+                                color: white;
+
+                                @include tab {
+                                    display: none;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .information__link {
+                    color: white;
+                    font-size: 1.8rem;
+                    display: table;
+                    margin-left: auto;
+                    margin-top: 26px;
+                    font-style: italic;
+
+                    @include sp {
+                        padding: 20px 0;
+                        border: 1px solid white;
+                        display: flex;
+                        justify-content: center;
+                        width: 100%;
+                        position: relative;
+                        margin-top: 60px;
+                    }
+
+                    &::after {
+                        content: "";
+                        margin-left: 12px;
+                        width: 36px;
+                        height: 10px;
+                        display: inline-block;
+                        right: 14px;
+                        top: 0;
+                        bottom: 0;
+                        margin: auto;
+                        background-image: url(../img/cmn/btn__arrow-w.svg);
+
+                        @include sp {
+                            position: absolute;
+                        }
+                    }
+                }
+            }
+        }
+
+        #sec_bottomnav {
+            padding: 220px 0;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-image: url(../img/top/bottomnav_bg_pc.jpg);
+
+            @include sp {
+                background-image: url(../img/top/bottomnav_bg_sp.jpg);
+                padding: 80px 0;
+            }
+
+            .bottomnav__list {
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+
+                .bottomnav__listCard {
+                    width: 42%;
+
+                    @include sp {
+                        width: 100%;
+                    }
+
+                    a {
+                        padding: 36px 0;
+                        color: white;
+                        font-size: 2rem;
+                        text-align: center;
+                        display: flex;
+                        justify-content: center;
+                        position: relative;
+                        border-bottom: 1px solid white;
+
+                        @include sp {
+                            font-size: 1.6rem;
+                            padding: 30px 0;
+                        }
+
+                        &:after {
+                            content: "";
+                            margin-right: 0;
+                            width: 36px;
+                            height: 10px;
+                            display: inline-block;
+                            position: absolute;
+                            right: 0;
+                            top: 0;
+                            bottom: 0;
+                            margin: auto;
+                            background-size: contain;
+                            background-repeat: no-repeat;
+                            background-image: url(../img/cmn/btn__arrow-w.svg);
+
+                            @include sp {
+                                width: 30px;
+                            }
+                        }
+                    }
+
+                    &:nth-child(-n + 2) {
+                        a {
+                            @include notsp {
+                                border-top: 1px solid white;
+
+                            }
+                        }
+                    }
+
+                    &:first-child {
+                        a {
+                            @include sp {
+                                border-top: 1px solid white;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+//webP対応
+.webp {
+    .home {
+        #sec_content {
+            #sec_mainv {
+                background-image: url(../img/top/mainv_bg_pc.webp);
+
+                @include sp {
+                    background-image: url(../img/top/mainv_bg_sp.webp);
+                }
+            }
+
+            #sec_consulting {
+                background-image: url(../img/top/consulting_bg.webp);
+
+                @include sp {
+                    background-image: url(../img/top/consulting_bg_sp.webp);
+                }
+            }
+
+            #sec_information {
+                background-image: url(../img/top/information_bg_pc.webp);
+
+                @include sp {
+                    background-image: url(../img/top/information_bg_sp.webp);
+                }
+            }
+        }
+    }
+}
+
+.no-webp {
+    .home {
+        #sec_content {
+            #sec_mainv {
+                background-image: url(../img/top/mainv_bg_pc.jpg);
+
+                @include sp {
+                    background-image: url(../img/top/mainv_bg_sp.jpg);
+                }
+            }
+
+            #sec_consulting {
+                background-image: url(../img/top/consulting_bg.jpg);
+
+                @include sp {
+                    background-image: url(../img/top/consulting_bg_sp.jpg);
+                }
+            }
+
+            #sec_information {
+                background-image: url(../img/top/information_bg_pc.jpg);
+
+                @include sp {
+                    background-image: url(../img/top/information_bg_sp.jpg);
+                }
+            }
+        }
+    }
+}

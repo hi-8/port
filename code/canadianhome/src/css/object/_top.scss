@@ -1,0 +1,714 @@
+.home {
+    &__unfixed-news {
+        width: 100%;
+        background-color: $col_mred;
+        padding: 15px 27px;
+        display: flex;
+        flex-wrap: wrap;
+        box-sizing: border-box;
+
+        @include sp {
+
+            padding: 15px 10px;
+        }
+
+        &-cell {
+            display: flex;
+            align-items: center;
+
+            @include tab {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            img {
+                align-self: center;
+                margin-right: 10px;
+
+                @include tab_port {
+                    display: none;
+                }
+            }
+
+            a,
+            p {
+                color: white;
+            }
+
+            p {
+                @include en;
+                font-size: 3rem;
+                margin-right: 25px;
+
+                @include tab {
+                    font-size: 2rem;
+                    margin-bottom: 5px;
+                }
+            }
+
+            a {
+                font-size: 1.6rem;
+                font-weight: 500;
+
+                @include sp {
+                    font-size: 1.2rem;
+                }
+            }
+
+            span {
+                color: white;
+                @include en;
+                font-size: 1.6rem;
+                margin-left: 10px;
+            }
+
+            &:not(:last-child) {
+                @include nottab {
+                    margin-right: 3.3%;
+
+                }
+
+                @include tab {
+                    margin-bottom: 10px;
+                }
+            }
+        }
+    }
+
+    .p--slide {
+        width: 100%;
+        margin-top: 23px;
+
+        &__cell {}
+
+        .slick-dots li {
+            button:before {
+                content: "■";
+            }
+
+            &.slick-active {
+                button:before {
+                    color: $col_mred;
+                }
+            }
+        }
+    }
+
+
+    #sec_catch {
+        .catch__inr {
+            max-width: 1150px;
+            width: 90%;
+            position: relative;
+            margin: auto;
+
+            .catch__text {
+                padding: 32% 0 24.78%;
+                position: relative;
+
+                @include sp {
+                    padding: 45% 0;
+                }
+
+                .catch__text-detail {
+                    font-size: 2rem;
+                    line-height: 5rem;
+                    margin-bottom: 6rem;
+                    text-align: center;
+                    @include feature;
+                    font-weight: 600;
+
+                    @include sp {
+                        font-size: 1.6rem;
+                        line-height: 3.4rem;
+                        margin-bottom: 4rem;
+                    }
+                }
+
+                .catch__text-link {
+                    border: 5px solid $col_mred;
+                    padding: 25px 45px;
+                    background-color: white;
+                    transition: all .4s;
+                    display: table;
+                    margin: auto;
+
+                    @include sp {
+                        padding: 20px 0;
+                        width: 100%;
+                    }
+
+                    .catch__text-link--en {
+                        font-size: 1.8rem;
+                        text-align: center;
+                        @include en;
+                        margin-bottom: 15px;
+                        letter-spacing: 0;
+
+                        @include sp {
+                            font-size: 1.4rem;
+                            margin-bottom: 10px;
+                        }
+                    }
+
+                    .catch__text-link--jp {
+                        font-size: 2rem;
+                        text-align: center;
+                        font-weight: 600;
+                        @include feature;
+
+                        @include sp {
+                            font-size: 1.6rem;
+                        }
+                    }
+
+                    .catch__text-link--en,
+                    .catch__text-link--jp {
+                        color: $col_mred;
+                    }
+
+                    &:hover {
+                        background-color: $col_mred;
+                        opacity: 1;
+
+                        .catch__text-link--en,
+                        .catch__text-link--jp {
+                            color: white;
+                        }
+
+                    }
+                }
+            }
+
+            .catch__images {
+                position: absolute;
+                transition: opacity .8s;
+                opacity: 0;
+
+                &.isAnimate {
+                    opacity: 1;
+                }
+
+                &01 {
+                    top: 7%;
+                    left: 0;
+                    right: 0;
+                    margin: auto;
+                    width: 25.7%;
+                }
+
+                &02 {
+                    top: 19.8%;
+                    left: 3.8%;
+                    width: 20.2%;
+                    transition-delay: .4s;
+
+                    @include tab {
+                        width: 18%;
+                        left: 1%;
+                    }
+
+                    @include sp {
+                        top: 80px;
+                    }
+
+                }
+
+                &03 {
+                    top: 19.8%;
+                    right: 10%;
+                    width: 11.9%;
+                    transition-delay: .8s;
+
+                    @include tab {
+                        right: 4%;
+                    }
+
+                    @include sp {
+                        top: 80px;
+                    }
+                }
+
+                &04 {
+                    top: 45.6%;
+                    left: 0;
+                    width: 12.3%;
+
+                    @include tab {
+                        display: none;
+                    }
+
+                    &.isAnimate {
+                        @include sp {
+                            opacity: 0;
+                        }
+                    }
+                }
+
+                &05 {
+                    top: 39.298%;
+                    right: 0;
+                    width: 12.76%;
+                    transition-delay: .4s;
+
+                    @include tab {
+                        display: none;
+                    }
+
+                    &.isAnimate {
+                        @include sp {
+                            opacity: 0;
+                        }
+                    }
+                }
+
+                &06 {
+                    bottom: 13.77%;
+                    left: 10.2%;
+                    width: 13.6%;
+
+                    @include tab {
+                        left: 0;
+                    }
+
+                    @include sp {
+                        bottom: 20px;
+                    }
+                }
+
+                &07 {
+                    bottom: 16.88%;
+                    right: 3.42%;
+                    width: 20.9%;
+                    transition-delay: .4s;
+
+                    @include tab {
+                        right: 0;
+                        width: 17%;
+                    }
+
+                    @include sp {
+                        bottom: 40px;
+                    }
+                }
+
+                &08 {
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                    margin: auto;
+                    width: 20.9%;
+                    transition-delay: .8s;
+
+                    @include sp {
+                        width: 30%;
+                    }
+                }
+            }
+        }
+    }
+
+    #sec_house {
+        padding-top: 120px;
+
+        @include sp {
+            margin-bottom: 80px;
+        }
+
+        .house__heading {
+            font-size: 2rem;
+            text-align: center;
+            margin-bottom: 130px;
+
+            @include sp {
+                font-size: 1.6rem;
+                margin-bottom: 80px;
+            }
+
+            span {
+                font-size: 10rem;
+                @include en;
+                display: block;
+                color: $col_mred;
+
+                @include tab {
+                    font-size: 4rem;
+
+                }
+            }
+        }
+
+        .house__list {
+            display: flex;
+            flex-wrap: wrap;
+            max-width: 1280px;
+            width: 90%;
+            margin: auto;
+            justify-content: space-between;
+
+            .slick-dots {
+                bottom: -45px;
+            }
+
+            .house__list-cell {
+                width: 48.8%;
+
+                @include tab {
+                    width: 100%;
+                }
+
+                &:not(:nth-of-type(1)),
+                &:not(:nth-of-type(2)) {
+                    @include nottab {
+                        margin-bottom: 180px;
+                    }
+                }
+
+                &:not(:last-of-type) {
+                    @include tab {
+                        margin-bottom: 0;
+                    }
+                }
+
+                .house__list-img {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    margin: auto;
+                    margin-bottom: 40px;
+
+                    @include sp {
+                        width: 75%;
+                        min-height: 220px;
+                    }
+
+                    img {
+                        align-self: center;
+
+                    }
+                }
+
+                .house__list-link {
+                    font-size: 4rem;
+                    text-align: center;
+                    display: table;
+                    margin: auto;
+                    position: relative;
+                    margin-bottom: 20px;
+                    font-weight: 600;
+                    width: 100%;
+
+                    @include sp {
+                        font-size: 2.4rem;
+                    }
+
+                    &:after {
+                        content: "";
+                        width: 15px;
+                        height: 100%;
+                        display: inline-block;
+                        background-image: url(../img/top/house_arrow-b.svg);
+                        background-size: 100% auto;
+                        margin: auto;
+                        margin-left: 30px;
+                        transition: all .4s;
+                        position: absolute;
+                        background-position: center;
+                        background-repeat: no-repeat;
+                    }
+
+                }
+
+                .house__list-top {
+                    display: block;
+
+                    &:hover {
+                        .house__list-link::after {
+                            transform: translateX(20px);
+                        }
+                    }
+                }
+
+                .house__list-catch {
+                    font-size: 1.6rem;
+                    text-align: center;
+                    margin-bottom: 15px;
+                    font-weight: 500;
+                    line-height: 1.8em;
+
+                    @include sp {
+                        font-size: 1.4rem;
+                    }
+                }
+
+                .house__list-price {
+                    font-size: 1.6rem;
+                    text-align: center;
+                    margin-bottom: 45px;
+
+                    span {
+                        font-size: 3.3rem;
+                        text-align: center;
+                        font-weight: 600;
+                        @include en2;
+                    }
+                }
+
+                .house__list-baloon {
+                    position: relative;
+                    display: inline-block;
+                    margin: 16px 0 0;
+                    padding: 43px 28px;
+                    width: 100%;
+                    color: #555;
+                    font-size: 16px;
+                    background: #FFF;
+                    border: solid 3px $col_mgray;
+                    box-sizing: border-box;
+
+                    @include sp {
+                        padding: 20px;
+                    }
+
+                    &:before {
+                        content: "";
+                        position: absolute;
+                        top: -24px;
+                        left: 50%;
+                        margin-left: -15px;
+                        border: 12px solid transparent;
+                        border-bottom: 12px solid #FFF;
+                        z-index: 2;
+                    }
+
+                    &:after {
+                        content: "";
+                        position: absolute;
+                        top: -30px;
+                        left: 50%;
+                        margin-left: -17px;
+                        border: 14px solid transparent;
+                        border-bottom: 14px solid $col_mgray;
+                        z-index: 1;
+                    }
+
+                    &:hover {
+                        .comment-top::after {
+                            transform: translateX(10px);
+                        }
+                    }
+                }
+
+                .house__list-comment {
+                    display: flex;
+                    justify-content: space-between;
+
+                    @include sp {
+                        display: block;
+                    }
+
+                    .house__list-commentImg {
+                        width: 23.2%;
+
+                        @include sp {
+                            margin: auto;
+                            display: block;
+                        }
+                    }
+
+                    .house__list-commentText {
+                        display: block;
+                        width: 72.7%;
+
+                        @include sp {
+                            width: 100%;
+                        }
+
+                        .comment-top {
+                            padding: 13px 0;
+                            color: $col_dgray;
+                            border-bottom: 1px solid $col_dgray;
+                            position: relative;
+                            font-weight: 600;
+
+                            @include sp {
+                                font-size: 1.4rem;
+                            }
+
+                            &::after {
+                                content: "";
+                                width: 8px;
+                                height: 100%;
+                                display: inline-block;
+                                background-image: url(../img/top/house_arrow-g.svg);
+                                background-size: 100% auto;
+                                margin: auto;
+                                margin-left: 20px;
+                                position: absolute;
+                                background-position: center;
+                                background-repeat: no-repeat;
+                                top: 0;
+                                transition: all .4s;
+                            }
+                        }
+
+                        .comment-bottom {
+                            font-size: 1.6rem;
+                            padding-top: 13px;
+                            line-height: 1.8em;
+                            font-size: 1.6rem;
+                            font-weight: 600;
+                            @include feature;
+
+                            @include sp {
+                                font-size: 1.4rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    #sec_information {
+        position: relative;
+        padding-bottom: 110px;
+        // margin-top: 145px;
+
+        @include sp {
+            padding-bottom: 200px;
+            // margin-top: 80px;
+        }
+
+        .information__img {
+            position: absolute;
+            width: 17.7%;
+            bottom: 0;
+            right: 2%;
+        }
+
+
+
+        .information__inr {
+            max-width: 1000px;
+            margin: auto;
+
+            .information__mocal {
+                width: 100%;
+                margin: auto;
+                margin-top: 80px;
+                display: block;
+                position: relative;
+
+                @include tab {
+                    width: 90%;
+                    margin-top: 60px;
+                }
+            }
+
+            .information__news {
+                border-top: 3px solid $col_mred;
+                border-bottom: 3px solid $col_mred;
+                padding: 50px 0;
+                width: 90%;
+                margin: auto;
+                margin-bottom: 100px;
+
+                @include sp {
+                    margin-bottom: 60px;
+                }
+
+                .information__news-title {
+                    @include en;
+                    font-size: 6.5rem;
+                    color: $col_mred;
+                    text-align: center;
+                    margin-bottom: 60px;
+
+                    @include sp {
+                        font-size: 4rem;
+                    }
+                }
+
+                .information__news-list {
+                    display: block;
+                    width: 90%;
+                    max-width: 728px;
+                    margin: auto;
+
+                    .information__news-cell {
+                        margin-bottom: 24px;
+
+                        .information__news-link {
+                            width: 100%;
+                            display: flex;
+                            align-items: center;
+
+                            @include sp {
+                                display: block;
+                            }
+
+                            .information__news-date {
+                                width: 24.72%;
+                                font-size: 1.8rem;
+
+                                @include sp {
+                                    font-size: 1.4rem;
+                                    width: 100%;
+                                    display: inline-block;
+                                    margin-bottom: 10px;
+                                }
+                            }
+
+                            .information__news-name {
+                                width: 75.28%;
+                                font-size: 1.8rem;
+
+                                @include sp {
+                                    font-size: 1.6rem;
+                                    width: 100%;
+                                    line-height: 1.6em;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .information__news-bottomLink {
+                    font-size: 1.8rem;
+                    text-align: center;
+                    font-weight: 600;
+                    margin: auto;
+                    display: table;
+                    margin-top: 50px;
+                    position: relative;
+
+                    &::after {
+                        content: "";
+                        width: 7px;
+                        height: 100%;
+                        display: inline-block;
+                        background-image: url(../img/top/house_arrow-b.svg);
+                        background-size: 100% auto;
+                        margin: auto;
+                        margin-left: 10px;
+                        transition: all .4s;
+                        position: absolute;
+                        background-position: center;
+                        background-repeat: no-repeat;
+                    }
+                }
+            }
+
+            .c--contact-tel {
+                max-width: 700px;
+                margin-top: 110px;
+                padding: 45px 0;
+
+                @include sp {
+                    margin-top: 60px;
+                }
+            }
+        }
+    }
+}

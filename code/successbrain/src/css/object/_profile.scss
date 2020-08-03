@@ -1,0 +1,145 @@
+.page-template-page-profile {
+    #sec_profile {
+        padding: 80px 0 120px;
+
+        @include sp {
+            padding: 60px 0 80px;
+        }
+
+        .profile__inr {
+            max-width: 854px;
+            margin: auto;
+
+            .profile__map {
+                margin-bottom: 60px;
+
+                @include sp {
+                    margin-bottom: 40px;
+                    height: 230px;
+                }
+            }
+
+            .profile__cell {
+                &:not(:last-child) {
+                    margin-bottom: 120px;
+                }
+
+                .c--headingIcon {
+                    margin-bottom: 60px;
+
+                    @include sp {
+                        margin-bottom: 30px;
+                    }
+                }
+
+                .profile__title {
+                    font-size: 2rem;
+                    text-align: center;
+                    color: $col_dblue;
+                    margin-bottom: 80px;
+
+                    @include sp {
+                        margin-bottom: 30px;
+                    }
+                }
+
+                .profile__content {
+                    @include sp {
+                        width: 90%;
+                        margin: auto;
+                    }
+
+                    .profile__text {
+                        width: 100%;
+
+                        dd {}
+
+                        &.profile__text--Flex {
+                            display: flex;
+                            align-items: center;
+                            border-bottom: 1px solid $col_vdblue;
+
+                            &:first-child {
+                                border-top: 1px solid $col_vdblue;
+                            }
+
+                            dt,
+                            dd {
+                                padding: 40px 0;
+                                line-height: 1.8em;
+
+                                @include sp {
+                                    padding: 20px 0;
+                                }
+                            }
+
+                            dt {
+                                width: 23.4%;
+                                font-size: 1.6rem;
+                                color: $col_dblue;
+
+                                @include notsp {
+                                    padding-left: 16px;
+                                    box-sizing: border-box;
+                                }
+
+                                @include sp {
+                                    width: 28.6%;
+                                    font-size: 1.4rem;
+                                }
+                            }
+
+                            dd {
+                                width: 76.6%;
+                                font-size: 1.6rem;
+
+                                @include sp {
+                                    font-size: 1.4rem;
+                                    width: 71.4%;
+                                }
+
+                            }
+                        }
+
+                        &.profile__text--Block {
+                            &:not(:last-child) {
+                                margin-bottom: 40px;
+                            }
+
+                            dt {
+                                color: $col_dblue;
+                                font-size: 1.8rem;
+                                display: flex;
+                                margin-bottom: 30px;
+                                border-bottom: 1px solid $col_vdblue;
+                                align-items: center;
+                                padding-bottom: 12px;
+
+                                &:after {
+                                    content: "";
+                                    width: 38px;
+                                    height: 15px;
+                                    display: block;
+                                    background-image: url(../img/philosophy/stage_icon.svg);
+                                    background-repeat: no-repeat;
+                                    background-size: auto 100%;
+                                    margin-left: 14px;
+                                }
+                            }
+
+                            dd {
+                                font-size: 1.6rem;
+                                line-height: 1.8em;
+
+                                @include sp {
+                                    font-size: 1.4rem;
+                                }
+                            }
+                        }
+                    }
+
+                }
+            }
+        }
+    }
+}
